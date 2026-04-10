@@ -1,0 +1,200 @@
+-----
+update_id: 0
+subject: Cold_Sub_34
+predicate: Cold_Pred_18
+template_type: SWITCH
+requested_object: Cold_Obj_10
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 1
+subject: Cold_Sub_23
+predicate: Cold_Pred_9
+template_type: START
+requested_object: Cold_Obj_44
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_44
+-----
+update_id: 2
+subject: Cold_Sub_23
+predicate: Cold_Pred_12
+template_type: END
+requested_object: Cold_Obj_32
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 3
+subject: Cold_Sub_25
+predicate: Cold_Pred_9
+template_type: END
+requested_object: Cold_Obj_22
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 4
+subject: Cold_Sub_15
+predicate: Cold_Pred_10
+template_type: SWITCH
+requested_object: Cold_Obj_38
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 5
+subject: Cold_Sub_12
+predicate: Cold_Pred_16
+template_type: START
+requested_object: Cold_Obj_36
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_36
+-----
+update_id: 6
+subject: Hot_Sub_4
+predicate: Hot_Pred_0
+template_type: START
+requested_object: Cold_Obj_12
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_12
+-----
+update_id: 7
+subject: Cold_Sub_28
+predicate: Cold_Pred_18
+template_type: SWITCH
+requested_object: Cold_Obj_39
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 8
+subject: Cold_Sub_14
+predicate: Cold_Pred_17
+template_type: START
+requested_object: Cold_Obj_19
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_19
+-----
+update_id: 9
+subject: Cold_Sub_11
+predicate: Cold_Pred_16
+template_type: START
+requested_object: Cold_Obj_42
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_42
+-----
+update_id: 10
+subject: Cold_Sub_45
+predicate: Cold_Pred_14
+template_type: END
+requested_object: Cold_Obj_1
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 11
+subject: Cold_Sub_48
+predicate: Cold_Pred_11
+template_type: END
+requested_object: Cold_Obj_36
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 12
+subject: Cold_Sub_4
+predicate: Cold_Pred_1
+template_type: START
+requested_object: Cold_Obj_20
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_20
+-----
+update_id: 13
+subject: Cold_Sub_34
+predicate: Cold_Pred_1
+template_type: SWITCH
+requested_object: Cold_Obj_27
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 14
+subject: Cold_Sub_2
+predicate: Cold_Pred_4
+template_type: SWITCH
+requested_object: Hot_Obj_3
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 15
+subject: Cold_Sub_13
+predicate: Cold_Pred_19
+template_type: START
+requested_object: Cold_Obj_13
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Cold_Obj_13
+-----
+update_id: 16
+subject: Cold_Sub_25
+predicate: Cold_Pred_17
+template_type: END
+requested_object: Cold_Obj_14
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 17
+subject: Cold_Sub_21
+predicate: Cold_Pred_6
+template_type: SWITCH
+requested_object: Cold_Obj_39
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 18
+subject: Cold_Sub_45
+predicate: Cold_Pred_10
+template_type: END
+requested_object: Hot_Obj_4
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None
+-----
+update_id: 19
+subject: Cold_Sub_27
+predicate: Cold_Pred_17
+template_type: SWITCH
+requested_object: Cold_Obj_25
+previous_object: None
+before_value: None
+action: NO_OP
+after_value: None

@@ -1,0 +1,6 @@
+# Large local binaries / databases
+neo4j-community-5.26.0-unix.tar.gz
+neo4j_server/
+__pycache__/
+*.db
+*.tar.gz

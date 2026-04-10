@@ -1,0 +1,8 @@
+total_updates: 20
+num_no_ops: 15
+num_mutations: 5
+total_time_sec: 0.0006424260000130744
+throughput_updates_per_sec: 31131.990298638237
+correctness: 1.0
+concurrency: 1
+executor_type: sequential

@@ -1,0 +1,12 @@
+total_updates: 20
+num_no_ops: 5
+num_mutations: 15
+total_time_sec: 10.29518632683903
+pure_inference_time: 10.293595554307103
+system_overhead_sec: 0.001590772531926632
+throughput_updates_per_sec: 1.9426554668428888
+total_decisions: 20
+avg_time_per_inference: 0.5146797777153551
+avg_parallel_width: 1.8181818181818181
+executor_type: dag
+correctness: 1.0

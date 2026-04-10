@@ -1,0 +1,8 @@
+total_updates: 1000
+num_no_ops: 536
+num_mutations: 464
+total_time_sec: 0.050514766000560485
+throughput_updates_per_sec: 19796.19186969815
+avg_parallel_width: 7.936507936507937
+executor_type: dag
+correctness: 1.0

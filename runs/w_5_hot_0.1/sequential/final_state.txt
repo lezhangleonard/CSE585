@@ -1,0 +1,1 @@
+(Cold_Sub_23, Cold_Pred_9) -> Cold_Obj_44

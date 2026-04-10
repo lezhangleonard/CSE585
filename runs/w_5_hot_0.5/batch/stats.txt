@@ -1,0 +1,9 @@
+total_updates: 5
+num_no_ops: 5
+num_mutations: 0
+total_time_sec: 0.00010155000018130522
+throughput_updates_per_sec: 49236.82906029646
+executor_type: batch
+batch_size: 50
+concurrency: 50
+correctness: 1.0

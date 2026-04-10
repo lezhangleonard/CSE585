@@ -1,0 +1,12 @@
+total_updates: 20
+num_no_ops: 2
+num_mutations: 18
+total_time_sec: 14.721192394383252
+pure_inference_time: 14.720171659253538
+system_overhead_sec: 0.0010207351297140121
+throughput_updates_per_sec: 1.3585855998751049
+total_decisions: 20
+avg_time_per_inference: 0.7360085829626769
+correctness: 1.0
+concurrency: 1
+executor_type: sequential
