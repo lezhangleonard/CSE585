@@ -4,3 +4,5 @@ neo4j_server/
 __pycache__/
 *.db
 *.tar.gz
+logs
+slurm*

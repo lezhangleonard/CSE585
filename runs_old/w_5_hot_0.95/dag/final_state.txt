@@ -1,0 +1,3 @@
+(Sub_2, Pred_1) -> Obj_1
+(Sub_3, Pred_2) -> Obj_2
+(Sub_4, Pred_2) -> Demo.

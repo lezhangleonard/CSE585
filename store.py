@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Tuple, Optional
 from copy import deepcopy
-from reasoning_engine import Decision
+from llm_reasoning_engine import Decision
 from neo4j import GraphDatabase
 
 class GraphStore(ABC):

@@ -1,0 +1,12 @@
+[
+  {
+    "batch_index": 0,
+    "batch_size": 5,
+    "layer_widths": [
+      4,
+      1
+    ],
+    "num_edges": 1,
+    "num_layers": 2
+  }
+]

@@ -1,0 +1,180 @@
+-----
+update_id: 0
+subject: Sub_4
+predicate: Pred_2
+requested_object: Obj_1
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_1
+-----
+update_id: 1
+subject: Sub_2
+predicate: Pred_1
+requested_object: Obj_1
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_1
+-----
+update_id: 2
+subject: Sub_3
+predicate: Pred_2
+requested_object: Obj_2
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_2
+-----
+update_id: 4
+subject: Sub_25
+predicate: Pred_2
+requested_object: Obj_2
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_2
+-----
+update_id: 3
+subject: Sub_2
+predicate: Pred_1
+requested_object: Obj_3
+previous_object: Obj_1
+before_value: Obj_1
+action: APPLY
+after_value: Obj_3
+-----
+update_id: 5
+subject: Sub_4
+predicate: Pred_4
+requested_object: Obj_4
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_4
+-----
+update_id: 6
+subject: Sub_1
+predicate: Pred_1
+requested_object: Obj_4
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_4
+-----
+update_id: 7
+subject: Sub_4
+predicate: Pred_2
+requested_object: Obj_4
+previous_object: Obj_1
+before_value: Obj_1
+action: APPLY
+after_value: Obj_4
+-----
+update_id: 8
+subject: Sub_4
+predicate: Pred_1
+requested_object: Obj_1
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_1
+-----
+update_id: 9
+subject: Sub_4
+predicate: Pred_2
+requested_object: Obj_3
+previous_object: Obj_4
+before_value: Obj_4
+action: APPLY
+after_value: Obj_3
+-----
+update_id: 10
+subject: Sub_6
+predicate: Pred_1
+requested_object: Obj_2
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_2
+-----
+update_id: 11
+subject: Sub_1
+predicate: Pred_0
+requested_object: Obj_0
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_0
+-----
+update_id: 12
+subject: Sub_4
+predicate: Pred_0
+requested_object: Obj_3
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_3
+-----
+update_id: 13
+subject: Sub_0
+predicate: Pred_2
+requested_object: Obj_8
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_8
+-----
+update_id: 14
+subject: Sub_0
+predicate: Pred_2
+requested_object: Obj_4
+previous_object: Obj_8
+before_value: Obj_8
+action: APPLY
+after_value: Obj_4
+-----
+update_id: 15
+subject: Sub_1
+predicate: Pred_1
+requested_object: Obj_4
+previous_object: Obj_4
+before_value: Obj_4
+action: NO_OP
+after_value: Obj_4
+-----
+update_id: 16
+subject: Sub_2
+predicate: Pred_0
+requested_object: Obj_4
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_4
+-----
+update_id: 17
+subject: Sub_3
+predicate: Pred_2
+requested_object: Obj_0
+previous_object: Obj_2
+before_value: Obj_2
+action: APPLY
+after_value: Obj_0
+-----
+update_id: 18
+subject: Sub_2
+predicate: Pred_2
+requested_object: Obj_3
+previous_object: None
+before_value: None
+action: APPLY
+after_value: Obj_3
+-----
+update_id: 19
+subject: Sub_2
+predicate: Pred_2
+requested_object: Obj_3
+previous_object: Obj_3
+before_value: Obj_3
+action: NO_OP
+after_value: Obj_3

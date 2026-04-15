@@ -1,12 +1,12 @@
 import json
+import time
 from dataclasses import dataclass
-from typing import List, Dict
-import argparse
+from typing import List, Dict, Optional
 from vllm import SamplingParams
+
 
 @dataclass
 class ExtractedFact:
-    """Structured output format matching the agentic framework."""
     id: int
     s: str
     p: str
@@ -15,109 +15,133 @@ class ExtractedFact:
     resolved_sentence: str
     simplified_sentence: str
 
+
 class SimpleAgenticPipeline:
-    def __init__(self, llm, context_window: int = 5):
+    def __init__(self, llm, context_window: int = 5, resolve_pronouns: bool = True, debug: bool = False):
         self.llm = llm
         self.context_window = context_window
+        self.resolve_pronouns = resolve_pronouns
+        self.debug = debug
         self.resolved_memory = []
+
         self.sampling_params = SamplingParams(
             temperature=0.0,
-            max_tokens=150,
-            stop=["}", "<|im_end|>"] # Stop generating immediately after JSON closes
+            max_tokens=160,
+            stop=["<|im_end|>", "<|eot_id|>", "<|end_of_text|>"]
         )
 
-    def _build_resolve_prompt(self, text: str) -> list:
+        self.total_inference_time = 0.0
+        self.num_llm_calls = 0
+        self.json_parse_failures = 0
+        self.num_sentences_processed = 0
+        self.num_resolution_calls = 0
+        self.num_resolution_skipped = 0
+
+    def reset(self):
+        self.resolved_memory = []
+        self.total_inference_time = 0.0
+        self.num_llm_calls = 0
+        self.json_parse_failures = 0
+        self.num_sentences_processed = 0
+        self.num_resolution_calls = 0
+        self.num_resolution_skipped = 0
+
+    def _build_resolve_prompt(self, text: str) -> str:
         system_instruction = """You are a precise NLP system for pronoun resolution.
-Task:
-- Resolve ALL pronouns in the target sentence using the provided context.
-- Pronouns include: she, he, it, they, her, his, its, their, etc.
-- You MUST replace every pronoun with its explicit referent noun.
-- Do NOT leave any pronouns unresolved.
+Resolve pronouns in the target sentence using the supplied context.
+Return exactly one valid JSON object with keys:
+- \"description_of_changes\"
+- \"resolved_target_sentence\"
+Do not output any text before or after the JSON object."""
+        return f"""<|im_start|>system
+{system_instruction}<|im_end|>
+<|im_start|>user
+Input: {json.dumps(text)}
+Output:<|im_end|>
+<|im_start|>assistant
+"""
 
+    def _build_extract_prompt(self, text: str) -> str:
+        system_instruction = """You are an information extraction system for a knowledge graph.
+Return exactly one valid JSON object with keys:
+- \"simplified_sentence\"
+- \"subject\"
+- \"predicate\"
+- \"object\"
 Rules:
-- Use ONLY entities from the context.
-- If multiple candidates exist, choose the most likely one.
-- Preserve the original sentence meaning.
-
-You MUST return ONLY valid JSON:
-{
-  "description_of_changes": "...",
-  "resolved_target_sentence": "..."
-}"""
+1. Simplify to the core relation.
+2. Extract subject, predicate, object from the simplified sentence.
+3. Keep important qualifiers inside the object.
+4. If input starts with \"Demo: \" followed by a synthetic triple, extract it verbatim without rewriting.
+Do not output any text before or after the JSON object."""
         return f"""<|im_start|>system
-        {system_instruction}<|im_end|>
-        <|im_start|>user
-        Input: "{text}"
-        Output:<|im_end|>
-        <|im_start|>assistant
-        {{"""
+{system_instruction}<|im_end|>
+<|im_start|>user
+Input: {json.dumps(text)}
+Output:<|im_end|>
+<|im_start|>assistant
+"""
 
-    def _build_extract_prompt(self, text: str) -> list:
-        system_instruction = """You are an expert Information Extraction system for a Knowledge Graph.
-            Your task is to take a complex sentence, simplify it into its core relational meaning, and then extract the triple.
+    def _extract_json_object(self, text: str) -> Optional[dict]:
+        text = text.strip()
+        if not text:
+            return None
 
-            Follow these strict steps:
-            1. Simplify the original sentence to its most basic relationship.
-            2. Extract the subject, predicate, and object ONLY from that simplified sentence.
-            3. If the sentence contains additional context like locations, dates, or institutions, combine them into the 'object' string instead of deleting them.
-            4. SPECIAL OVERRIDE: If the input sentence is strictly in the format "Demo: [Subject] [Predicate] [Object]" (e.g., "Demo: Sub_2 Pred_1 Obj_1"), bypass all simplification rules. Directly extract those exact three words as the subject, predicate, and object.
+        candidates = [text]
+        start = text.find("{")
+        end = text.rfind("}")
+        if start != -1 and end != -1 and start <= end:
+            candidates.append(text[start:end + 1])
+        if not text.startswith("{"):
+            candidates.append("{" + text + "}")
+            candidates.append("{" + text)
+        if not text.endswith("}"):
+            candidates.append(text + "}")
 
-            You MUST return exactly this JSON structure and nothing else:
-            {
-              "simplified_sentence": "...",
-              "subject": "...",
-              "predicate": "...",
-              "object": "..."
-            }
-
-            ---
-            EXAMPLE 1 (THIS IS ONLY AN EXAMPLE):
-            Input: "Demo: Sub_2 Pred_1 Obj_1."
-            Output:
-            {
-              "simplified_sentence": "Demo: Sub_2 Pred_1 Obj_1.",
-              "subject": "Sub_2",
-              "predicate": "Pred_1",
-              "object": "Obj_1"
-            }"""
-        return f"""<|im_start|>system
-        {system_instruction}<|im_end|>
-        <|im_start|>user
-        Input: "{text}"
-        Output:<|im_end|>
-        <|im_start|>assistant
-        {{"""
+        seen = set()
+        for cand in candidates:
+            cand = cand.strip()
+            if not cand or cand in seen:
+                continue
+            seen.add(cand)
+            try:
+                return json.loads(cand)
+            except Exception:
+                continue
+        return None
 
     def _generate_json(self, prompt: str) -> dict:
-        """Utility wrapper to handle vLLM inference and JSON cleaning."""
+        start_time = time.perf_counter()
+        self.num_llm_calls += 1
         outputs = self.llm.generate([prompt], self.sampling_params, use_tqdm=False)
-        
+        self.total_inference_time += time.perf_counter() - start_time
+
         response_text = outputs[0].outputs[0].text.strip()
-
-        full_json_str = "{" + response_text
-        if not full_json_str.endswith("}"):
-            full_json_str += "}"
-
-        try:
-            return json.loads(full_json_str)
-        except json.JSONDecodeError:
-            print(f"Warning: Failed to parse JSON.\n{full_json_str}")
+        parsed = self._extract_json_object(response_text)
+        if parsed is None:
+            self.json_parse_failures += 1
+            print(f"[Extractor Parse Warning] Failed to parse JSON: {repr(response_text)}")
             return {}
+        return parsed
 
     def process_stream(self, sentences: List[Dict]) -> List[ExtractedFact]:
-        """Main pipeline loop bridging memory, resolution, and extraction."""
         extracted_facts = []
 
         for item in sentences:
             target_id = item.get("id")
             target = item.get("text", "")
-            
+
             context = " ".join(self.resolved_memory[-self.context_window:])
             text_input = f"Context:\n{context}\n\nTarget sentence:\n{target}\n"
 
-            resolve_prompt = self._build_resolve_prompt(text_input)
-            resolve_data = self._generate_json(resolve_prompt)
-            resolved_sentence = resolve_data.get("resolved_target_sentence", target)
+            if self.resolve_pronouns:
+                resolve_prompt = self._build_resolve_prompt(text_input)
+                resolve_data = self._generate_json(resolve_prompt)
+                resolved_sentence = resolve_data.get("resolved_target_sentence", target)
+                self.num_resolution_calls += 1
+            else:
+                resolved_sentence = target
+                self.num_resolution_skipped += 1
 
             self.resolved_memory.append(resolved_sentence)
 
@@ -125,7 +149,7 @@ You MUST return ONLY valid JSON:
             extract_data = self._generate_json(extract_prompt)
 
             fact = ExtractedFact(
-                id = target_id,
+                id=target_id,
                 s=extract_data.get("subject", ""),
                 p=extract_data.get("predicate", ""),
                 o=extract_data.get("object", ""),
@@ -134,25 +158,13 @@ You MUST return ONLY valid JSON:
                 simplified_sentence=extract_data.get("simplified_sentence", "")
             )
             extracted_facts.append(fact)
+            self.num_sentences_processed += 1
+
+            if self.debug:
+                print(f"[Extractor] id={fact.id}")
+                print(f"  source:    {fact.source_sentence}")
+                print(f"  resolved:  {fact.resolved_sentence}")
+                print(f"  simplified:{fact.simplified_sentence}")
+                print(f"  triple:    ({fact.s}, {fact.p}, {fact.o})")
 
         return extracted_facts
-
-# --- Usage Example ---
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--workload", type=str, required=True)
-    args = parser.parse_args()
-
-    # 1. Load Raw Data
-    with open(args.workload, "r") as f:
-        raw_texts = json.load(f)
-    
-    # Initialize pipeline
-    extractor = SimpleAgenticPipeline()
-    
-    # Process stream
-    results = extractor.process_stream(raw_texts)
-    
-    # Clean Dataclass output
-    for fact in results:
-        print(f"S: {fact.s} | P: {fact.p} | O: {fact.o}")
