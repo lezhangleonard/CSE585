@@ -40,7 +40,10 @@ mkdir -p logs
 
 # E2E Run
 
-python run_experiment_v2.py --workload workloads/pilot/w_5_hot_0.95.json --store memory
+python run_experiment_v2.py 
+
+
+# --workload workloads/pilot/w_5_hot_0.95.json --store memory
 
 # echo "All workloads generated."
 # ./neo4j_server/bin/neo4j start
