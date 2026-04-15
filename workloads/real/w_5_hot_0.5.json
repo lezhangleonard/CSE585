@@ -1,0 +1,67 @@
+[
+  {
+    "id": 0,
+    "text": "User_35 is using Notebook.",
+    "metadata": {
+      "subject": "User_35",
+      "predicate": "uses_tool",
+      "object": "Notebook",
+      "template_type": "tool_progressive",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 1,
+    "text": "The latest preference update says that User_24 prefers Rust.",
+    "metadata": {
+      "subject": "User_24",
+      "predicate": "prefers",
+      "object": "Rust",
+      "template_type": "pref_update",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 2,
+    "text": "Current memory says that User_24 is in Portland.",
+    "metadata": {
+      "subject": "User_24",
+      "predicate": "located_in",
+      "object": "Portland",
+      "template_type": "loc_memory",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 3,
+    "text": "User_26 is using TensorFlow.",
+    "metadata": {
+      "subject": "User_26",
+      "predicate": "uses_tool",
+      "object": "TensorFlow",
+      "template_type": "tool_progressive",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 4,
+    "text": "According to the latest note, User_30 collaborates with User_21.",
+    "metadata": {
+      "subject": "User_30",
+      "predicate": "collaborates_with",
+      "object": "User_21",
+      "template_type": "collab_note",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  }
+]

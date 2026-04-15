@@ -35,7 +35,7 @@
     "subject": "Sub_25"
   },
   {
-    "object": "Obj_2",
+    "object": "Obj_0",
     "predicate": "Pred_2",
     "subject": "Sub_3"
   },
@@ -45,8 +45,18 @@
     "subject": "Sub_4"
   },
   {
+    "object": "Obj_1",
+    "predicate": "Pred_1",
+    "subject": "Sub_4"
+  },
+  {
     "object": "Obj_3",
     "predicate": "Pred_2",
+    "subject": "Sub_4"
+  },
+  {
+    "object": "Obj_4",
+    "predicate": "Pred_4",
     "subject": "Sub_4"
   },
   {

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 0,
+    "text": "User_35 is using Notebook.",
+    "metadata": {
+      "subject": "User_35",
+      "predicate": "uses_tool",
+      "object": "Notebook",
+      "template_type": "tool_progressive",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 1,
+    "text": "User_24 prefers Optimization.",
+    "metadata": {
+      "subject": "User_24",
+      "predicate": "prefers",
+      "object": "Optimization",
+      "template_type": "pref_basic",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 2,
+    "text": "User_24 is dependent on Service_03.",
+    "metadata": {
+      "subject": "User_24",
+      "predicate": "depends_on",
+      "object": "Service_03",
+      "template_type": "depends_progressive",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 3,
+    "text": "User_23 is dependent on Service_10.",
+    "metadata": {
+      "subject": "User_23",
+      "predicate": "depends_on",
+      "object": "Service_10",
+      "template_type": "depends_progressive",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 4,
+    "text": "Alex is a member of Group_08.",
+    "metadata": {
+      "subject": "Alex",
+      "predicate": "member_of",
+      "object": "Group_08",
+      "template_type": "member_basic",
+      "subject_hot": true,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  }
+]

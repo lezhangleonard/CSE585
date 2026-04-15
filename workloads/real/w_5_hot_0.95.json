@@ -1,0 +1,67 @@
+[
+  {
+    "id": 0,
+    "text": "Noah has a preference for Rust.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "prefers",
+      "object": "Rust",
+      "template_type": "pref_noun",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 1,
+    "text": "The system notes that Alex uses CUDA.",
+    "metadata": {
+      "subject": "Alex",
+      "predicate": "uses_tool",
+      "object": "CUDA",
+      "template_type": "tool_note",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 2,
+    "text": "Current memory says that Alex is in Denver.",
+    "metadata": {
+      "subject": "Alex",
+      "predicate": "located_in",
+      "object": "Denver",
+      "template_type": "loc_memory",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 3,
+    "text": "The system notes that Emma uses Jupyter.",
+    "metadata": {
+      "subject": "Emma",
+      "predicate": "uses_tool",
+      "object": "Jupyter",
+      "template_type": "tool_note",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 4,
+    "text": "A recent update indicates that Jane researches AgentMemory.",
+    "metadata": {
+      "subject": "Jane",
+      "predicate": "researches",
+      "object": "AgentMemory",
+      "template_type": "research_update",
+      "subject_hot": true,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  }
+]

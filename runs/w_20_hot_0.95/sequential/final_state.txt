@@ -7,5 +7,7 @@
 (Sub_25, Pred_2) -> Obj_2
 (Sub_3, Pred_2) -> Obj_0
 (Sub_4, Pred_0) -> Obj_3
+(Sub_4, Pred_1) -> Obj_1
 (Sub_4, Pred_2) -> Obj_3
+(Sub_4, Pred_4) -> Obj_4
 (Sub_6, Pred_1) -> Obj_2

@@ -6,7 +6,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --partition=spgpu
 #SBATCH --gres=gpu:a40:1
-#SBATCH --account=engin1
+#SBATCH --account=eecs542w26s001_class
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
 
@@ -40,11 +40,7 @@ mkdir -p logs
 
 # E2E Run
 
-python run_experiment_v2.py 
-
-
-# --workload workloads/pilot/w_5_hot_0.95.json --store memory
-
+python run_experiment_v2.py
 # echo "All workloads generated."
 # ./neo4j_server/bin/neo4j start
 # python run_experiment.py --workload workloads/w_20_hot_0.8.json --store memory

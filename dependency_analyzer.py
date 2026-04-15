@@ -3,7 +3,7 @@ from typing import List, Dict, Tuple
 class DependencyAnalyzer:
     """
     Identifies structural dependencies within a batch of updates.
-    A dependency exists if two updates target the same (subject, predicate) key.
+    A dependency exists if two updates target the same (subject) key.
     """
     def analyze(self, updates: List[dict]) -> List[Tuple[int, int]]:
         edges = []

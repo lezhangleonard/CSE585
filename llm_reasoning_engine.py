@@ -61,6 +61,7 @@ class LLMReasoningEngine:
         s = update["subject"]
         p = update["predicate"]
         o = update["object"]
+        uid = update["id"]
         current_value = snapshot.get((s, p))
         current_value_str = current_value if current_value is not None else "NONE"
         context_str = self._get_subject_context(snapshot, s)
@@ -79,11 +80,20 @@ Decision rule:
 - Return \"APPLY\" if no current value exists for that (subject, predicate).
 - Return \"APPLY\" if the incoming object differs from the current value.
 
+Temporal rule:
+- update_id is the position of this update in the input stream.
+- A larger update_id means a later update.
+- Use update_id only as ordering metadata.
+- Do not ignore the exact current value for the same (subject, predicate).
+
 Do not output markdown.
 Do not output code fences.
 Do not output any text before or after the JSON object.
 Keep \"reasoning\" short.
 <|eot_id|><|start_header_id|>user<|end_header_id|>
+Incoming update metadata:
+update_id={uid}
+
 Current pair:
 subject={s}
 predicate={p}

@@ -1,0 +1,262 @@
+[
+  {
+    "id": 0,
+    "text": "Noah has a preference for Rust.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "prefers",
+      "object": "Rust",
+      "template_type": "pref_noun",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 1,
+    "text": "The system notes that Alex uses CUDA.",
+    "metadata": {
+      "subject": "Alex",
+      "predicate": "uses_tool",
+      "object": "CUDA",
+      "template_type": "tool_note",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 2,
+    "text": "Current memory says that Alex is in Denver.",
+    "metadata": {
+      "subject": "Alex",
+      "predicate": "located_in",
+      "object": "Denver",
+      "template_type": "loc_memory",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 3,
+    "text": "The system notes that Emma uses Jupyter.",
+    "metadata": {
+      "subject": "Emma",
+      "predicate": "uses_tool",
+      "object": "Jupyter",
+      "template_type": "tool_note",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 4,
+    "text": "A recent update indicates that Jane researches AgentMemory.",
+    "metadata": {
+      "subject": "Jane",
+      "predicate": "researches",
+      "object": "AgentMemory",
+      "template_type": "research_update",
+      "subject_hot": true,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 5,
+    "text": "Noah uses VSCode as a tool.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "uses_tool",
+      "object": "VSCode",
+      "template_type": "tool_basic",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 6,
+    "text": "Noah works on PipelineX.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "works_on",
+      "object": "PipelineX",
+      "template_type": "works_on_basic",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 7,
+    "text": "Jane is using VSCode.",
+    "metadata": {
+      "subject": "Jane",
+      "predicate": "uses_tool",
+      "object": "VSCode",
+      "template_type": "tool_progressive",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 8,
+    "text": "Noah prefers Automation.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "prefers",
+      "object": "Automation",
+      "template_type": "pref_basic",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 9,
+    "text": "The system notes that Noah uses CUDA.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "uses_tool",
+      "object": "CUDA",
+      "template_type": "tool_note",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 10,
+    "text": "According to the latest note, User_34 collaborates with Jack.",
+    "metadata": {
+      "subject": "User_34",
+      "predicate": "collaborates_with",
+      "object": "Jack",
+      "template_type": "collab_note",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 11,
+    "text": "Latest update: Noah now works on KnowledgeBase.",
+    "metadata": {
+      "subject": "Noah",
+      "predicate": "works_on",
+      "object": "KnowledgeBase",
+      "template_type": "works_on_update",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 12,
+    "text": "Alex prefers GPUCluster.",
+    "metadata": {
+      "subject": "Alex",
+      "predicate": "prefers",
+      "object": "GPUCluster",
+      "template_type": "pref_basic",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 13,
+    "text": "Jack is using CUDA.",
+    "metadata": {
+      "subject": "Jack",
+      "predicate": "uses_tool",
+      "object": "CUDA",
+      "template_type": "tool_progressive",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 14,
+    "text": "The latest preference update says that User_17 prefers GPUCluster.",
+    "metadata": {
+      "subject": "User_17",
+      "predicate": "prefers",
+      "object": "GPUCluster",
+      "template_type": "pref_update",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 15,
+    "text": "Jack is collaborating with Emma.",
+    "metadata": {
+      "subject": "Jack",
+      "predicate": "collaborates_with",
+      "object": "Emma",
+      "template_type": "collab_progressive",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 16,
+    "text": "Jane prefers Rust.",
+    "metadata": {
+      "subject": "Jane",
+      "predicate": "prefers",
+      "object": "Rust",
+      "template_type": "pref_basic",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 17,
+    "text": "The latest preference update says that Emma prefers Rust.",
+    "metadata": {
+      "subject": "Emma",
+      "predicate": "prefers",
+      "object": "Rust",
+      "template_type": "pref_update",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 18,
+    "text": "User_22 is collaborating with Noah.",
+    "metadata": {
+      "subject": "User_22",
+      "predicate": "collaborates_with",
+      "object": "Noah",
+      "template_type": "collab_progressive",
+      "subject_hot": false,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  },
+  {
+    "id": 19,
+    "text": "The system notes that Emma uses VSCode.",
+    "metadata": {
+      "subject": "Emma",
+      "predicate": "uses_tool",
+      "object": "VSCode",
+      "template_type": "tool_note",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": true
+    }
+  }
+]
