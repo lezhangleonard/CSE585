@@ -6,3 +6,4 @@ __pycache__/
 *.tar.gz
 logs
 slurm*
+final_runs/

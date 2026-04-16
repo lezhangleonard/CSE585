@@ -1,0 +1,242 @@
+[
+  {
+    "id": 0,
+    "text": "Demo : Sub_39 Pred_8 Obj_26.",
+    "metadata": {
+      "subject": "Sub_39",
+      "predicate": "Pred_8",
+      "object": "Obj_26",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 1,
+    "text": "Demo : Sub_28 Pred_12 Obj_49.",
+    "metadata": {
+      "subject": "Sub_28",
+      "predicate": "Pred_12",
+      "object": "Obj_49",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 2,
+    "text": "Demo : Sub_28 Pred_15 Obj_37.",
+    "metadata": {
+      "subject": "Sub_28",
+      "predicate": "Pred_15",
+      "object": "Obj_37",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 3,
+    "text": "Demo : Sub_30 Pred_12 Obj_27.",
+    "metadata": {
+      "subject": "Sub_30",
+      "predicate": "Pred_12",
+      "object": "Obj_27",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 4,
+    "text": "Demo : Sub_15 Pred_13 Obj_43.",
+    "metadata": {
+      "subject": "Sub_15",
+      "predicate": "Pred_13",
+      "object": "Obj_43",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 5,
+    "text": "Demo : Sub_17 Pred_19 Obj_41.",
+    "metadata": {
+      "subject": "Sub_17",
+      "predicate": "Pred_19",
+      "object": "Obj_41",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 6,
+    "text": "Demo : Sub_4 Pred_0 Obj_17.",
+    "metadata": {
+      "subject": "Sub_4",
+      "predicate": "Pred_0",
+      "object": "Obj_17",
+      "subject_hot": true,
+      "predicate_hot": true,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 7,
+    "text": "Demo : Sub_33 Pred_13 Obj_4.",
+    "metadata": {
+      "subject": "Sub_33",
+      "predicate": "Pred_13",
+      "object": "Obj_4",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 8,
+    "text": "Demo : Sub_19 Pred_20 Obj_24.",
+    "metadata": {
+      "subject": "Sub_19",
+      "predicate": "Pred_20",
+      "object": "Obj_24",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 9,
+    "text": "Demo : Sub_16 Pred_19 Obj_47.",
+    "metadata": {
+      "subject": "Sub_16",
+      "predicate": "Pred_19",
+      "object": "Obj_47",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 10,
+    "text": "Demo : Sub_50 Pred_17 Obj_6.",
+    "metadata": {
+      "subject": "Sub_50",
+      "predicate": "Pred_17",
+      "object": "Obj_6",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 11,
+    "text": "Demo : Sub_46 Pred_14 Obj_41.",
+    "metadata": {
+      "subject": "Sub_46",
+      "predicate": "Pred_14",
+      "object": "Obj_41",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 12,
+    "text": "Demo : Sub_50 Pred_4 Obj_25.",
+    "metadata": {
+      "subject": "Sub_50",
+      "predicate": "Pred_4",
+      "object": "Obj_25",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 13,
+    "text": "Demo : Sub_39 Pred_4 Obj_32.",
+    "metadata": {
+      "subject": "Sub_39",
+      "predicate": "Pred_4",
+      "object": "Obj_32",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 14,
+    "text": "Demo : Sub_7 Pred_7 Obj_3.",
+    "metadata": {
+      "subject": "Sub_7",
+      "predicate": "Pred_7",
+      "object": "Obj_3",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 15,
+    "text": "Demo : Sub_18 Pred_11 Obj_17.",
+    "metadata": {
+      "subject": "Sub_18",
+      "predicate": "Pred_11",
+      "object": "Obj_17",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 16,
+    "text": "Demo : Sub_44 Pred_11 Obj_50.",
+    "metadata": {
+      "subject": "Sub_44",
+      "predicate": "Pred_11",
+      "object": "Obj_50",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 17,
+    "text": "Demo : Sub_17 Pred_16 Obj_50.",
+    "metadata": {
+      "subject": "Sub_17",
+      "predicate": "Pred_16",
+      "object": "Obj_50",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 18,
+    "text": "Demo : Sub_45 Pred_3 Obj_17.",
+    "metadata": {
+      "subject": "Sub_45",
+      "predicate": "Pred_3",
+      "object": "Obj_17",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 19,
+    "text": "Demo : Sub_39 Pred_15 Obj_19.",
+    "metadata": {
+      "subject": "Sub_39",
+      "predicate": "Pred_15",
+      "object": "Obj_19",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  }
+]

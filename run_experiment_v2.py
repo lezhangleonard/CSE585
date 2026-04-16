@@ -4,6 +4,7 @@ import threading
 import queue
 import copy
 import torch
+import argparse
 
 from updated_agent_extractor import SimpleAgenticPipeline
 from llm_reasoning_engine import LLMReasoningEngine
@@ -17,15 +18,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 MODEL_PATH = "/scratch/engin_root/engin1/arshiv/ml/hf_models/qwen2.5-7b-instruct"
 BACKEND = "hf"  # "hf" or "vllm"
 STORE_TYPE = "memory"  # "memory" or "neo4j"
-BATCH_SIZE = 5
-VISUALIZE_DAG = False
-VERBOSE = True
-RESOLVE_PRONOUNS = True
+VISUALIZE_DAG = True
+VERBOSE = False
+RESOLVE_PRONOUNS = False
 
-WORKLOADS = [
-    "workloads/pilot/w_20_hot_0.95.json",
-    # "workloads/pilot/w_5_hot_0.95.json",
-]
 
 SENTINEL = object()
 
@@ -156,9 +152,9 @@ def create_store():
     return Neo4jStore("bolt://localhost:7687", "neo4j", "mypwdmypwd")
 
 
-def create_run_dir(executor_type, workload_path):
+def create_run_dir(executor_type, workload_path, batch_ratio, RUN_TYPE):
     workload_name = os.path.splitext(os.path.basename(workload_path))[0]
-    run_dir = os.path.join("runs", workload_name, executor_type)
+    run_dir = os.path.join("eval_runs", RUN_TYPE, batch_ratio, workload_name, executor_type)
     os.makedirs(run_dir, exist_ok=True)
     return run_dir
 
@@ -283,72 +279,78 @@ def persist_run(result, run_dir, extracted_facts, run_config):
         write_json(os.path.join(run_dir, "batch_summaries.json"), result["batch_summaries"])
 
 
-def run_workload(shared_llm, workload_path):
+def run_workload(shared_llm, workload_path, RUN_TYPE):
     with open(workload_path, "r") as f:
         raw_texts = json.load(f)
 
-    print(f"\n{'=' * 60}")
-    print(f"RUNNING WORKLOAD: {workload_path}")
-    print(f"backend={BACKEND}, batch_size={BATCH_SIZE}, store={STORE_TYPE}")
-    print(f"{'=' * 60}")
 
-    executor_order = ["sequential", "batch", "dag"]
-    results = {}
-    reference_final_state = None
+    workload_size = len(raw_texts)
+    batches = [4, 8, 16]
 
-    for executor_name in executor_order:
-        extractor = SimpleAgenticPipeline(shared_llm, debug=VERBOSE, resolve_pronouns=RESOLVE_PRONOUNS)
-        engine = LLMReasoningEngine(shared_llm, debug=VERBOSE)
-        store = create_store()
+    for bs in batches:
+        batch_size = 1 + (workload_size // bs)
+        print(f"\n{'=' * 60}")
+        print(f"RUNNING WORKLOAD: {workload_path}")
+        print(f"backend={BACKEND}, batch_size={batch_size}, store={STORE_TYPE}")
+        print(f"{'=' * 60}")
 
-        if executor_name == "sequential":
-            executor = SequentialExecutor(extractor=extractor, store=store, reasoning_engine=engine)
-        elif executor_name == "batch":
-            executor = BatchExecutor(extractor=extractor, store=store, reasoning_engine=engine, batch_size=BATCH_SIZE)
-        else:
-            executor = DAGExecutor(extractor=extractor, store=store, reasoning_engine=engine, batch_size=BATCH_SIZE)
+        executor_order = ["sequential", "batch", "dag"]
+        results = {}
+        reference_final_state = None
 
-        run_dir = create_run_dir(executor_name, workload_path)
-        run_config = {
-            "workload": workload_path,
-            "backend": BACKEND,
-            "store": STORE_TYPE,
-            "batch_size": BATCH_SIZE,
-            "executor": executor_name,
-            "visualize_dag": VISUALIZE_DAG,
-            "resolve_pronouns": RESOLVE_PRONOUNS,
-        }
+        for executor_name in executor_order:
+            extractor = SimpleAgenticPipeline(shared_llm, debug=VERBOSE, resolve_pronouns=RESOLVE_PRONOUNS)
+            engine = LLMReasoningEngine(shared_llm, debug=VERBOSE)
+            store = create_store()
 
-        print(f"Starting {executor_name}...")
-        result, extracted_facts = run_single_executor(
-            executor_name=executor_name,
-            executor=executor,
-            raw_texts=raw_texts,
-            extractor=extractor,
-            batch_size=BATCH_SIZE,
-            run_dir=run_dir,
-        )
+            if executor_name == "sequential":
+                executor = SequentialExecutor(extractor=extractor, store=store, reasoning_engine=engine)
+            elif executor_name == "batch":
+                executor = BatchExecutor(extractor=extractor, store=store, reasoning_engine=engine, batch_size=batch_size)
+            else:
+                executor = DAGExecutor(extractor=extractor, store=store, reasoning_engine=engine, batch_size=batch_size)
 
-        if executor_name == "sequential":
-            reference_final_state = result["final_state"]
-            result["stats"]["correctness"] = 1.0
-            result["stats"]["final_state_exact_match"] = True
-            result["stats"]["reference_final_state_size"] = len(reference_final_state)
-            result["stats"]["candidate_final_state_size"] = len(reference_final_state)
-            result["stats"]["final_state_intersection"] = len(reference_final_state)
-            result["stats"]["final_state_union"] = len(reference_final_state)
-        else:
-            result["stats"].update(compute_final_state_metrics(reference_final_state, result["final_state"]))
+            run_dir = create_run_dir(executor_name, workload_path, bs, RUN_TYPE)
+            run_config = {
+                "workload": workload_path,
+                "backend": BACKEND,
+                "store": STORE_TYPE,
+                "batch_size": batch_size,
+                "executor": executor_name,
+                "visualize_dag": VISUALIZE_DAG,
+                "resolve_pronouns": RESOLVE_PRONOUNS,
+            }
 
-        persist_run(result, run_dir, extracted_facts, run_config)
-        results[executor_name] = result
+            print(f"Starting {executor_name}...")
+            result, extracted_facts = run_single_executor(
+                executor_name=executor_name,
+                executor=executor,
+                raw_texts=raw_texts,
+                extractor=extractor,
+                batch_size=batch_size,
+                run_dir=run_dir,
+            )
 
-        print(
-            f"{executor_name}: correctness={result['stats']['correctness']:.4f}, "
-            f"throughput={result['stats']['throughput_updates_per_sec']:.4f}, "
-            f"mutations={result['stats']['num_mutations']}, "
-            f"no_ops={result['stats']['num_no_ops']}"
-        )
+            if executor_name == "sequential":
+                reference_final_state = result["final_state"]
+                result["stats"]["correctness"] = 1.0
+                result["stats"]["final_state_exact_match"] = True
+                result["stats"]["reference_final_state_size"] = len(reference_final_state)
+                result["stats"]["candidate_final_state_size"] = len(reference_final_state)
+                result["stats"]["final_state_intersection"] = len(reference_final_state)
+                result["stats"]["final_state_union"] = len(reference_final_state)
+            else:
+                result["stats"].update(compute_final_state_metrics(reference_final_state, result["final_state"]))
+
+            persist_run(result, run_dir, extracted_facts, run_config)
+            results[executor_name] = result
+
+            print(
+                f"{executor_name}: correctness={result['stats']['correctness']:.4f}, "
+                f"throughput={result['stats']['throughput_updates_per_sec']:.4f}, "
+                f"mutations={result['stats']['num_mutations']}, "
+                f"no_ops={result['stats']['num_no_ops']}"
+            )
 
     return results
 
@@ -360,9 +362,36 @@ def main():
     print(f"{'=' * 60}")
     shared_llm = build_llm()
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=["synthetic", "real"], required=True)
+    args = parser.parse_args()
+
+    WORKLOADS = [
+        f"workloads/{args.mode}/w_5_hot_0.1.json",
+        f"workloads/{args.mode}/w_5_hot_0.5.json",
+        f"workloads/{args.mode}/w_5_hot_0.8.json",
+        f"workloads/{args.mode}/w_5_hot_0.95.json",
+        f"workloads/{args.mode}/w_20_hot_0.1.json",
+        f"workloads/{args.mode}/w_20_hot_0.5.json",
+        f"workloads/{args.mode}/w_20_hot_0.8.json",
+        f"workloads/{args.mode}/w_20_hot_0.95.json",
+        f"workloads/{args.mode}/w_100_hot_0.1.json",
+        f"workloads/{args.mode}/w_100_hot_0.5.json",
+        f"workloads/{args.mode}/w_100_hot_0.8.json",
+        f"workloads/{args.mode}/w_100_hot_0.95.json",
+        f"workloads/{args.mode}/w_500_hot_0.1.json",
+        f"workloads/{args.mode}/w_500_hot_0.5.json",
+        f"workloads/{args.mode}/w_500_hot_0.8.json",
+        f"workloads/{args.mode}/w_500_hot_0.95.json",
+        f"workloads/{args.mode}/w_1000_hot_0.1.json",
+        f"workloads/{args.mode}/w_1000_hot_0.5.json",
+        f"workloads/{args.mode}/w_1000_hot_0.8.json",
+        f"workloads/{args.mode}/w_1000_hot_0.95.json",
+    ]
+
     all_results = {}
     for workload_path in WORKLOADS:
-        all_results[workload_path] = run_workload(shared_llm, workload_path)
+        all_results[workload_path] = run_workload(shared_llm, workload_path, args.mode)
 
     print(f"\n{'=' * 60}")
     print("ALL WORKLOADS COMPLETE")

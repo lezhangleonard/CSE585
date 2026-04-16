@@ -1,5 +1,0 @@
-{"id": 0, "subject": "Sub_4", "predicate": "Pred_2", "object": "Obj_1", "source_sentence": "Demo: Sub_4 Pred_2 Obj_1.", "resolved_sentence": "Demo: Sub_4 Pred_2 Obj_1.", "simplified_sentence": "Sub_4 Pred_2 Obj_1."}
-{"id": 1, "subject": "Sub_2", "predicate": "Pred_1", "object": "Obj_1", "source_sentence": "Demo: Sub_2 Pred_1 Obj_1.", "resolved_sentence": "Demo: Sub_2 Pred_1 Obj_1.", "simplified_sentence": "Sub_2 Pred_1 Obj_1."}
-{"id": 2, "subject": "Sub_3", "predicate": "Pred_2", "object": "Obj_2", "source_sentence": "Demo: Sub_3 Pred_2 Obj_2.", "resolved_sentence": "Demo: Sub_3 Pred_2 Obj_2.", "simplified_sentence": "Sub_3 Pred_2 Obj_2."}
-{"id": 3, "subject": "Sub_2", "predicate": "Pred_1", "object": "Obj_3", "source_sentence": "Demo: Sub_2 Pred_1 Obj_3.", "resolved_sentence": "Demo: Sub_2 Pred_1 Obj_3.", "simplified_sentence": "Sub_2 Pred_1 Obj_3."}
-{"id": 4, "subject": "Sub_25", "predicate": "Pred_2", "object": "Obj_2", "source_sentence": "Demo: Sub_25 Pred_2 Obj_2.", "resolved_sentence": "Demo: Sub_25 Pred_2 Obj_2.", "simplified_sentence": "Sub_25 Pred_2 Obj_2."}

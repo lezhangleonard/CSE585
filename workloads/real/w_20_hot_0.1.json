@@ -1,37 +1,37 @@
 [
   {
     "id": 0,
-    "text": "User_35 is using Notebook.",
+    "text": "A recent update indicates that User_35 researches Paper_19.",
     "metadata": {
       "subject": "User_35",
-      "predicate": "uses_tool",
-      "object": "Notebook",
-      "template_type": "tool_progressive",
+      "predicate": "researches",
+      "object": "Paper_19",
+      "template_type": "research_update",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 1,
-    "text": "User_24 prefers Optimization.",
+    "text": "A recent update indicates that Team_10 researches Paper_13.",
     "metadata": {
-      "subject": "User_24",
-      "predicate": "prefers",
-      "object": "Optimization",
-      "template_type": "pref_basic",
+      "subject": "Team_10",
+      "predicate": "researches",
+      "object": "Paper_13",
+      "template_type": "research_update",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 2,
-    "text": "User_24 is dependent on Service_03.",
+    "text": "User_20 is dependent on Service_07.",
     "metadata": {
-      "subject": "User_24",
+      "subject": "User_20",
       "predicate": "depends_on",
-      "object": "Service_03",
+      "object": "Service_07",
       "template_type": "depends_progressive",
       "subject_hot": false,
       "predicate_hot": false,
@@ -40,12 +40,12 @@
   },
   {
     "id": 3,
-    "text": "User_23 is dependent on Service_10.",
+    "text": "User_24 collaborates with User_26.",
     "metadata": {
-      "subject": "User_23",
-      "predicate": "depends_on",
-      "object": "Service_10",
-      "template_type": "depends_progressive",
+      "subject": "User_24",
+      "predicate": "collaborates_with",
+      "object": "User_26",
+      "template_type": "collab_basic",
       "subject_hot": false,
       "predicate_hot": false,
       "object_hot": false
@@ -53,22 +53,48 @@
   },
   {
     "id": 4,
-    "text": "Alex is a member of Group_08.",
+    "text": "Team_03 is studying Paper_13.",
     "metadata": {
-      "subject": "Alex",
-      "predicate": "member_of",
-      "object": "Group_08",
-      "template_type": "member_basic",
-      "subject_hot": true,
+      "subject": "Team_03",
+      "predicate": "researches",
+      "object": "Paper_13",
+      "template_type": "research_study",
+      "subject_hot": false,
       "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 5,
-    "text": "User_21 is a member of Group_09.",
+    "text": "User_20 works on Task_19.",
     "metadata": {
-      "subject": "User_21",
+      "subject": "User_20",
+      "predicate": "works_on",
+      "object": "Task_19",
+      "template_type": "works_on_basic",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 6,
+    "text": "A recent update indicates that User_11 researches AgentMemory.",
+    "metadata": {
+      "subject": "User_11",
+      "predicate": "researches",
+      "object": "AgentMemory",
+      "template_type": "research_update",
+      "subject_hot": false,
+      "predicate_hot": false,
+      "object_hot": false
+    }
+  },
+  {
+    "id": 7,
+    "text": "User_39 is a member of Group_09.",
+    "metadata": {
+      "subject": "User_39",
       "predicate": "member_of",
       "object": "Group_09",
       "template_type": "member_basic",
@@ -78,7 +104,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 8,
     "text": "Team_01 works on PipelineX.",
     "metadata": {
       "subject": "Team_01",
@@ -86,30 +112,30 @@
       "object": "PipelineX",
       "template_type": "works_on_basic",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": true
     }
   },
   {
-    "id": 7,
-    "text": "According to the latest note, Team_01 collaborates with User_29.",
+    "id": 9,
+    "text": "Team_01 is located in Atlanta.",
     "metadata": {
       "subject": "Team_01",
-      "predicate": "collaborates_with",
-      "object": "User_29",
-      "template_type": "collab_note",
+      "predicate": "located_in",
+      "object": "Atlanta",
+      "template_type": "loc_basic",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
-    "id": 8,
-    "text": "A recent update indicates that User_37 researches Paper_14.",
+    "id": 10,
+    "text": "A recent update indicates that User_37 researches Paper_01.",
     "metadata": {
       "subject": "User_37",
       "predicate": "researches",
-      "object": "Paper_14",
+      "object": "Paper_01",
       "template_type": "research_update",
       "subject_hot": false,
       "predicate_hot": false,
@@ -117,78 +143,52 @@
     }
   },
   {
-    "id": 9,
-    "text": "User_36 prefers Databases.",
-    "metadata": {
-      "subject": "User_36",
-      "predicate": "prefers",
-      "object": "Databases",
-      "template_type": "pref_basic",
-      "subject_hot": false,
-      "predicate_hot": true,
-      "object_hot": false
-    }
-  },
-  {
-    "id": 10,
-    "text": "The system notes that User_12 uses Tool_01.",
-    "metadata": {
-      "subject": "User_12",
-      "predicate": "uses_tool",
-      "object": "Tool_01",
-      "template_type": "tool_note",
-      "subject_hot": false,
-      "predicate_hot": true,
-      "object_hot": false
-    }
-  },
-  {
     "id": 11,
-    "text": "Latest update: Team_08 now works on Task_12.",
+    "text": "Current memory says that User_37 is in SanDiego.",
     "metadata": {
-      "subject": "Team_08",
-      "predicate": "works_on",
-      "object": "Task_12",
-      "template_type": "works_on_update",
+      "subject": "User_37",
+      "predicate": "located_in",
+      "object": "SanDiego",
+      "template_type": "loc_memory",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 12,
-    "text": "Team_07 prefers Optimization.",
+    "text": "Current memory says that User_20 is in Phoenix.",
     "metadata": {
-      "subject": "Team_07",
-      "predicate": "prefers",
-      "object": "Optimization",
-      "template_type": "pref_basic",
+      "subject": "User_20",
+      "predicate": "located_in",
+      "object": "Phoenix",
+      "template_type": "loc_memory",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 13,
-    "text": "User_11 is collaborating with User_35.",
+    "text": "User_12 is currently working on Task_18.",
     "metadata": {
-      "subject": "User_11",
-      "predicate": "collaborates_with",
-      "object": "User_35",
-      "template_type": "collab_progressive",
+      "subject": "User_12",
+      "predicate": "works_on",
+      "object": "Task_18",
+      "template_type": "works_on_current",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 14,
-    "text": "A recent update indicates that User_36 researches Paper_20.",
+    "text": "The record shows that User_02 is part of InfraGroup.",
     "metadata": {
-      "subject": "User_36",
-      "predicate": "researches",
-      "object": "Paper_20",
-      "template_type": "research_update",
+      "subject": "User_02",
+      "predicate": "member_of",
+      "object": "InfraGroup",
+      "template_type": "member_record",
       "subject_hot": false,
       "predicate_hot": false,
       "object_hot": false
@@ -196,51 +196,51 @@
   },
   {
     "id": 15,
-    "text": "User_03 is using Docker.",
+    "text": "User_23 prefers Optimization.",
     "metadata": {
-      "subject": "User_03",
-      "predicate": "uses_tool",
-      "object": "Docker",
-      "template_type": "tool_progressive",
+      "subject": "User_23",
+      "predicate": "prefers",
+      "object": "Optimization",
+      "template_type": "pref_basic",
       "subject_hot": false,
-      "predicate_hot": true,
-      "object_hot": true
+      "predicate_hot": false,
+      "object_hot": false
     }
   },
   {
     "id": 16,
-    "text": "User_14 prefers C++.",
+    "text": "User_11 researches Paper_03.",
     "metadata": {
-      "subject": "User_14",
-      "predicate": "prefers",
-      "object": "C++",
-      "template_type": "pref_basic",
+      "subject": "User_11",
+      "predicate": "researches",
+      "object": "Paper_03",
+      "template_type": "research_basic",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 17,
-    "text": "User_40 has a preference for Optimization.",
+    "text": "User_35 prefers Testing.",
     "metadata": {
-      "subject": "User_40",
+      "subject": "User_35",
       "predicate": "prefers",
-      "object": "Optimization",
-      "template_type": "pref_noun",
+      "object": "Testing",
+      "template_type": "pref_basic",
       "subject_hot": false,
-      "predicate_hot": true,
+      "predicate_hot": false,
       "object_hot": false
     }
   },
   {
     "id": 18,
-    "text": "User_13 is dependent on Service_06.",
+    "text": "User_39 works on Project_10.",
     "metadata": {
-      "subject": "User_13",
-      "predicate": "depends_on",
-      "object": "Service_06",
-      "template_type": "depends_progressive",
+      "subject": "User_39",
+      "predicate": "works_on",
+      "object": "Project_10",
+      "template_type": "works_on_basic",
       "subject_hot": false,
       "predicate_hot": false,
       "object_hot": false
@@ -248,15 +248,15 @@
   },
   {
     "id": 19,
-    "text": "Team_05 works on PipelineX.",
+    "text": "User_23 depends on Service_03.",
     "metadata": {
-      "subject": "Team_05",
-      "predicate": "works_on",
-      "object": "PipelineX",
-      "template_type": "works_on_basic",
+      "subject": "User_23",
+      "predicate": "depends_on",
+      "object": "Service_03",
+      "template_type": "depends_basic",
       "subject_hot": false,
-      "predicate_hot": true,
-      "object_hot": true
+      "predicate_hot": false,
+      "object_hot": false
     }
   }
 ]

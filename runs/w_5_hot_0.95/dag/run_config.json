@@ -1,9 +1,0 @@
-{
-  "backend": "hf",
-  "batch_size": 5,
-  "executor": "dag",
-  "resolve_pronouns": true,
-  "store": "memory",
-  "visualize_dag": false,
-  "workload": "workloads/pilot/w_5_hot_0.95.json"
-}

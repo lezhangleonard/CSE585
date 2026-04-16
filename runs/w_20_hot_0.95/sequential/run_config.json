@@ -1,9 +1,0 @@
-{
-  "backend": "hf",
-  "batch_size": 5,
-  "executor": "sequential",
-  "resolve_pronouns": true,
-  "store": "memory",
-  "visualize_dag": false,
-  "workload": "workloads/pilot/w_20_hot_0.95.json"
-}
