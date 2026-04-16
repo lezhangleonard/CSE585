@@ -154,7 +154,7 @@ def create_store():
 
 def create_run_dir(executor_type, workload_path, batch_ratio, RUN_TYPE):
     workload_name = os.path.splitext(os.path.basename(workload_path))[0]
-    run_dir = os.path.join("eval_runs", RUN_TYPE, batch_ratio, workload_name, executor_type)
+    run_dir = os.path.join("eval_runs", RUN_TYPE, f"br_{batch_ratio}", workload_name, executor_type)
     os.makedirs(run_dir, exist_ok=True)
     return run_dir
 
