@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SIZES=(5 20 100 500 1000)
+SIZES=(50 100 200 500)
 HOT_RATIOS=(0.1 0.5 0.8 0.95)
 
 for n in "${SIZES[@]}"; do

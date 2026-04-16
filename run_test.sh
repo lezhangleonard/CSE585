@@ -6,14 +6,9 @@
 #SBATCH --time=08:00:00
 #SBATCH --partition=spgpu
 #SBATCH --gres=gpu:a40:1
-#SBATCH --account=eecs542w26s001_class
+#SBATCH --account=ece567w26_class
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
-
-
-# To run on great lakes
-#Step 1: salloc --account=ece567w26_class --partition=spgpu --gres=gpu:a40:1 --time=01:00:00 --mem=32G
-#Step 2: bash run_test.sh
 
 source ~/.bashrc
 conda activate akg
@@ -26,7 +21,29 @@ export MODEL_HOME=/scratch/engin_root/engin1/arshiv/ml/hf_models
 
 mkdir -p logs
 
-python run_experiment_v2.py --mode real
+echo "Starting vLLM server..."
+python -m vllm.entrypoints.openai.api_server \
+    --model /scratch/engin_root/engin1/arshiv/ml/hf_models/qwen2.5-7b-instruct \
+    --dtype bfloat16 \
+    --max-model-len 4096 \
+    --gpu-memory-utilization 0.75 \
+    --max-num-seqs 64 \
+    --enforce-eager \
+    --port 8000 &
+
+VLLM_PID=$!
+
+echo "Waiting for server to become active..."
+while ! curl -s http://localhost:8000/v1/models > /dev/null; do
+    sleep 10
+done
+echo "vLLM Server is ONLINE!"
+
+python run_experiment_v2.py --mode synthetic
+
+kill $VLLM_PID
+echo "Job complete."
+
 
 # echo "All workloads generated."
 # ./neo4j_server/bin/neo4j start

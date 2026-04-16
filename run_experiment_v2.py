@@ -14,9 +14,10 @@ from batch_executor import BatchExecutor
 from dag_executor import DAGExecutor
 from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from openai import OpenAI
 
 MODEL_PATH = "/scratch/engin_root/engin1/arshiv/ml/hf_models/qwen2.5-7b-instruct"
-BACKEND = "hf"  # "hf" or "vllm"
+BACKEND = "vllm"  # "hf" or "vllm"
 STORE_TYPE = "memory"  # "memory" or "neo4j"
 VISUALIZE_DAG = True
 VERBOSE = False
@@ -137,12 +138,59 @@ class VLLMBackend(LLMInterface):
 
         return self.llm.generate(texts, sampling_params, use_tqdm=use_tqdm)
 
+class VLLMOnlineBackend(LLMInterface):
+    def __init__(self, model_path, port=8000):
+        # Connect to the local vLLM server running in the SLURM job
+        self.client = OpenAI(
+            api_key="EMPTY", 
+            base_url=f"http://localhost:{port}/v1"
+        )
+        self.model_name = model_path
+        
+        # Load local tokenizer just to apply the Qwen2.5 chat template
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+
+    def generate(self, prompts, sampling_params=None, use_tqdm=False):
+        max_tokens = 256
+        if sampling_params is not None and hasattr(sampling_params, "max_tokens"):
+            max_tokens = sampling_params.max_tokens
+
+        texts = [
+            self.tokenizer.apply_chat_template(
+                p,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+            for p in prompts
+        ]
+
+        # Send the batch request to the local server
+        response = self.client.completions.create(
+            model=self.model_name,
+            prompt=texts,
+            temperature=0.0,
+            max_tokens=max_tokens,
+            stop=["<|eot_id|>"]
+        )
+
+        # Re-sort responses to guarantee alignment with original prompt order
+        choices = sorted(response.choices, key=lambda x: x.index)
+        
+        # Mock the vLLM output structure for compatibility with llm_reasoning_engine.py
+        class MockOutput:
+            def __init__(self, text):
+                self.text = text
+        class MockResult:
+            def __init__(self, text):
+                self.outputs = [MockOutput(text)]
+
+        return [MockResult(choice.text) for choice in choices]
 
 def build_llm():
     if BACKEND == "hf":
         return HFBackend(MODEL_PATH)
     if BACKEND == "vllm":
-        return VLLMBackend(MODEL_PATH)
+        return VLLMOnlineBackend(MODEL_PATH)
     raise ValueError(f"Unknown backend: {BACKEND}")
 
 
@@ -285,8 +333,8 @@ def run_workload(shared_llm, workload_path, RUN_TYPE):
 
 
     workload_size = len(raw_texts)
-    batches = [4, 8, 16]
-
+    # batches = [4, 8, 16]
+    batches = [4]
     for bs in batches:
         batch_size = 1 + (workload_size // bs)
         print(f"\n{'=' * 60}")
@@ -367,26 +415,26 @@ def main():
     args = parser.parse_args()
 
     WORKLOADS = [
-        f"workloads/{args.mode}/w_5_hot_0.1.json",
-        f"workloads/{args.mode}/w_5_hot_0.5.json",
-        f"workloads/{args.mode}/w_5_hot_0.8.json",
-        f"workloads/{args.mode}/w_5_hot_0.95.json",
-        f"workloads/{args.mode}/w_20_hot_0.1.json",
-        f"workloads/{args.mode}/w_20_hot_0.5.json",
-        f"workloads/{args.mode}/w_20_hot_0.8.json",
-        f"workloads/{args.mode}/w_20_hot_0.95.json",
-        f"workloads/{args.mode}/w_100_hot_0.1.json",
-        f"workloads/{args.mode}/w_100_hot_0.5.json",
-        f"workloads/{args.mode}/w_100_hot_0.8.json",
+        # f"workloads/{args.mode}/w_5_hot_0.1.json",
+        # f"workloads/{args.mode}/w_5_hot_0.5.json",
+        # f"workloads/{args.mode}/w_5_hot_0.8.json",
+        # f"workloads/{args.mode}/w_5_hot_0.95.json",
+        # f"workloads/{args.mode}/w_20_hot_0.1.json",
+        # f"workloads/{args.mode}/w_20_hot_0.5.json",
+        # f"workloads/{args.mode}/w_20_hot_0.8.json",
+        # f"workloads/{args.mode}/w_20_hot_0.95.json",
+        # f"workloads/{args.mode}/w_100_hot_0.1.json",
+        # f"workloads/{args.mode}/w_100_hot_0.5.json",
+        # f"workloads/{args.mode}/w_100_hot_0.8.json",
         f"workloads/{args.mode}/w_100_hot_0.95.json",
-        f"workloads/{args.mode}/w_500_hot_0.1.json",
-        f"workloads/{args.mode}/w_500_hot_0.5.json",
-        f"workloads/{args.mode}/w_500_hot_0.8.json",
-        f"workloads/{args.mode}/w_500_hot_0.95.json",
-        f"workloads/{args.mode}/w_1000_hot_0.1.json",
-        f"workloads/{args.mode}/w_1000_hot_0.5.json",
-        f"workloads/{args.mode}/w_1000_hot_0.8.json",
-        f"workloads/{args.mode}/w_1000_hot_0.95.json",
+        # f"workloads/{args.mode}/w_500_hot_0.1.json",
+        # f"workloads/{args.mode}/w_500_hot_0.5.json",
+        # f"workloads/{args.mode}/w_500_hot_0.8.json",
+        # f"workloads/{args.mode}/w_500_hot_0.95.json",
+        # f"workloads/{args.mode}/w_1000_hot_0.1.json",
+        # f"workloads/{args.mode}/w_1000_hot_0.5.json",
+        # f"workloads/{args.mode}/w_1000_hot_0.8.json",
+        # f"workloads/{args.mode}/w_1000_hot_0.95.json",
     ]
 
     all_results = {}
