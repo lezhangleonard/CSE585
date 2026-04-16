@@ -26,7 +26,7 @@ class LLMReasoningEngine:
         self.sampling_params = SamplingParams(
             temperature=0.0,
             max_tokens=96,
-            stop=["<|eot_id|>", "<|end_of_text|>", "\n\n"]
+            stop=["<|eot_id|>"]
         )
 
         self.total_inference_time = 0.0
@@ -66,8 +66,7 @@ class LLMReasoningEngine:
         current_value_str = current_value if current_value is not None else "NONE"
         context_str = self._get_subject_context(snapshot, s)
 
-        return f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>
-You are a memory update classifier.
+        system_msg = """You are a memory update classifier.
 
 Return exactly one valid JSON object with these keys only:
 - \"action\"
@@ -89,26 +88,29 @@ Temporal rule:
 Do not output markdown.
 Do not output code fences.
 Do not output any text before or after the JSON object.
-Keep \"reasoning\" short.
-<|eot_id|><|start_header_id|>user<|end_header_id|>
-Incoming update metadata:
-update_id={uid}
+Keep \"reasoning\" short."""
 
-Current pair:
+        user_msg = f"""update_id={uid}
+
+Current:
 subject={s}
 predicate={p}
 current_value={current_value_str}
 
-Incoming update:
+Incoming:
 subject={s}
 predicate={p}
 object={o}
 
-Other known facts for this subject:
+Context:
 {context_str}
 
-Return one JSON object only.
-<|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
+Return JSON only."""
+
+        return [
+        {"role": "system", "content": system_msg},
+        {"role": "user", "content": user_msg},
+    ]
 
     def reason(self, snapshot: Dict, update: Dict) -> Decision:
         return self.reason_batch(snapshot, [update])[0]

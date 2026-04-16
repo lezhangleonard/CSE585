@@ -19,12 +19,12 @@ BACKEND = "hf"  # "hf" or "vllm"
 STORE_TYPE = "memory"  # "memory" or "neo4j"
 BATCH_SIZE = 5
 VISUALIZE_DAG = False
-VERBOSE = False
+VERBOSE = True
 RESOLVE_PRONOUNS = True
 
 WORKLOADS = [
     "workloads/pilot/w_20_hot_0.95.json",
-    "workloads/pilot/w_5_hot_0.95.json",
+    # "workloads/pilot/w_5_hot_0.95.json",
 ]
 
 SENTINEL = object()
@@ -37,16 +37,20 @@ class LLMInterface:
 
 class HFBackend(LLMInterface):
     def __init__(self, model_path):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-        self.model = AutoModelForCausalLM.from_pretrained(
+        self.tokenizer = AutoTokenizer.from_pretrained(
             model_path,
-            torch_dtype=torch.bfloat16,
-            device_map="auto",
             trust_remote_code=True,
+            padding_side="left"
         )
         if self.tokenizer.pad_token_id is None:
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
-        self.stop_sequences = ["<|eot_id|>", "<|end_of_text|>", "\n\n"]
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            dtype=torch.bfloat16,
+            device_map="auto",
+            trust_remote_code=True,
+        )
+        self.stop_sequences = ["<|eot_id|>"]
 
     def _apply_stop(self, text):
         cut_positions = []
@@ -63,8 +67,17 @@ class HFBackend(LLMInterface):
         if sampling_params is not None and hasattr(sampling_params, "max_tokens"):
             max_new_tokens = sampling_params.max_tokens
 
+        texts = [
+            self.tokenizer.apply_chat_template(
+                p,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+            for p in prompts
+        ]
+
         inputs = self.tokenizer(
-            prompts,
+            texts,
             return_tensors="pt",
             padding=True,
             truncation=True,
@@ -86,11 +99,16 @@ class HFBackend(LLMInterface):
         for i in range(len(prompts)):
             prompt_len = inputs["attention_mask"][i].sum().item()
             gen_tokens = outputs[i][prompt_len:]
-            text = self.tokenizer.decode(gen_tokens, skip_special_tokens=True)
+
+            if len(gen_tokens) == 0:
+                text = ""
+            else:
+                text = self.tokenizer.decode(gen_tokens, skip_special_tokens=True)
+
             text = self._apply_stop(text)
             wrapped.append(HFOutput(text))
-        return wrapped
 
+        return wrapped
 
 class VLLMBackend(LLMInterface):
     def __init__(self, model_path):
@@ -109,9 +127,19 @@ class VLLMBackend(LLMInterface):
             sampling_params = SamplingParams(
                 temperature=0.0,
                 max_tokens=256,
-                stop=["<|eot_id|>", "<|end_of_text|>", "\n\n"],
+                stop=["<|eot_id|>"],
             )
-        return self.llm.generate(prompts, sampling_params, use_tqdm=use_tqdm)
+
+        texts = [
+            self.llm.get_tokenizer().apply_chat_template(
+                p,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+            for p in prompts
+        ]
+
+        return self.llm.generate(texts, sampling_params, use_tqdm=use_tqdm)
 
 
 def build_llm():

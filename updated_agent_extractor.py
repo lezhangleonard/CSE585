@@ -27,7 +27,7 @@ class SimpleAgenticPipeline:
         self.sampling_params = SamplingParams(
             temperature=0.0,
             max_tokens=160,
-            stop=["<|im_end|>", "<|eot_id|>", "<|end_of_text|>"]
+            stop=["<|eot_id|>"]
         )
 
         self.total_inference_time = 0.0
@@ -46,41 +46,42 @@ class SimpleAgenticPipeline:
         self.num_resolution_calls = 0
         self.num_resolution_skipped = 0
 
-    def _build_resolve_prompt(self, text: str) -> str:
+    def _build_resolve_prompt(self, text: str):
         system_instruction = """You are a precise NLP system for pronoun resolution.
-Resolve pronouns in the target sentence using the supplied context.
-Return exactly one valid JSON object with keys:
-- \"description_of_changes\"
-- \"resolved_target_sentence\"
-Do not output any text before or after the JSON object."""
-        return f"""<|im_start|>system
-{system_instruction}<|im_end|>
-<|im_start|>user
-Input: {json.dumps(text)}
-Output:<|im_end|>
-<|im_start|>assistant
-"""
+    Resolve pronouns in the target sentence using the supplied context.
+    Return exactly one valid JSON object with keys:
+    - "description_of_changes"
+    - "resolved_target_sentence"
+    Do not output any text before or after the JSON object."""
 
-    def _build_extract_prompt(self, text: str) -> str:
+        user_msg = f"Input: {json.dumps(text)}\nOutput:"
+
+        return [
+            {"role": "system", "content": system_instruction},
+            {"role": "user", "content": user_msg},
+        ]
+
+    def _build_extract_prompt(self, text: str):
         system_instruction = """You are an information extraction system for a knowledge graph.
-Return exactly one valid JSON object with keys:
-- \"simplified_sentence\"
-- \"subject\"
-- \"predicate\"
-- \"object\"
-Rules:
-1. Simplify to the core relation.
-2. Extract subject, predicate, object from the simplified sentence.
-3. Keep important qualifiers inside the object.
-4. If input starts with \"Demo: \" followed by a synthetic triple, extract it verbatim without rewriting.
-Do not output any text before or after the JSON object."""
-        return f"""<|im_start|>system
-{system_instruction}<|im_end|>
-<|im_start|>user
-Input: {json.dumps(text)}
-Output:<|im_end|>
-<|im_start|>assistant
-"""
+    Return exactly one valid JSON object with keys:
+    - "simplified_sentence"
+    - "subject"
+    - "predicate"
+    - "object"
+
+    Rules:
+    1. Simplify to the core relation.
+    2. Extract subject, predicate, object from the simplified sentence.
+    3. Keep important qualifiers inside the object.
+    4. If input starts with "Demo: " followed by a synthetic triple, extract it verbatim without rewriting.
+    Do not output any text before or after the JSON object."""
+
+        user_msg = f"Input: {json.dumps(text)}\nOutput:"
+
+        return [
+            {"role": "system", "content": system_instruction},
+            {"role": "user", "content": user_msg},
+        ]
 
     def _extract_json_object(self, text: str) -> Optional[dict]:
         text = text.strip()

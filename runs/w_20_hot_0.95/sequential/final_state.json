@@ -1,5 +1,10 @@
 [
   {
+    "object": "Obj_4",
+    "predicate": "Pred_1",
+    "subject": "Sub_0"
+  },
+  {
     "object": "Obj_8",
     "predicate": "Pred_2",
     "subject": "Sub_0"
@@ -25,7 +30,7 @@
     "subject": "Sub_2"
   },
   {
-    "object": "Obj_4",
+    "object": "Obj_3",
     "predicate": "Pred_2",
     "subject": "Sub_2"
   },
@@ -35,7 +40,7 @@
     "subject": "Sub_25"
   },
   {
-    "object": "Obj_0",
+    "object": "Obj_2",
     "predicate": "Pred_2",
     "subject": "Sub_3"
   },
@@ -50,7 +55,7 @@
     "subject": "Sub_4"
   },
   {
-    "object": "Obj_3",
+    "object": "Obj_4",
     "predicate": "Pred_2",
     "subject": "Sub_4"
   },

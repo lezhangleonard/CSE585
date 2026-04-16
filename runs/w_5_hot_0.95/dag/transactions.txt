@@ -5,9 +5,9 @@ predicate: Pred_2
 requested_object: Obj_1
 previous_object: None
 before_value: None
-action: APPLY
-new_value: Obj_1
-after_value: Obj_1
+action: NO_OP
+new_value: None
+after_value: None
 batch_index: 0
 layer_index: 0
 -----
@@ -17,9 +17,9 @@ predicate: Pred_1
 requested_object: Obj_1
 previous_object: None
 before_value: None
-action: APPLY
-new_value: Obj_1
-after_value: Obj_1
+action: NO_OP
+new_value: None
+after_value: None
 batch_index: 0
 layer_index: 0
 -----
@@ -29,9 +29,9 @@ predicate: Pred_2
 requested_object: Obj_2
 previous_object: None
 before_value: None
-action: APPLY
-new_value: Obj_2
-after_value: Obj_2
+action: NO_OP
+new_value: None
+after_value: None
 batch_index: 0
 layer_index: 0
 -----
@@ -41,9 +41,9 @@ predicate: Pred_2
 requested_object: Obj_2
 previous_object: None
 before_value: None
-action: APPLY
-new_value: Obj_2
-after_value: Obj_2
+action: NO_OP
+new_value: None
+after_value: None
 batch_index: 0
 layer_index: 0
 -----
@@ -51,10 +51,10 @@ update_id: 3
 subject: Sub_2
 predicate: Pred_1
 requested_object: Obj_3
-previous_object: Obj_1
-before_value: Obj_1
-action: APPLY
-new_value: Obj_3
-after_value: Obj_3
+previous_object: None
+before_value: None
+action: NO_OP
+new_value: None
+after_value: None
 batch_index: 0
 layer_index: 1
