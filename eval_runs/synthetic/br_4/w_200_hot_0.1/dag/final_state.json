@@ -1,0 +1,892 @@
+[
+  {
+    "object": "Obj_11",
+    "predicate": "Pred_12",
+    "subject": "Sub_0"
+  },
+  {
+    "object": "Obj_50",
+    "predicate": "Pred_15",
+    "subject": "Sub_0"
+  },
+  {
+    "object": "Obj_10",
+    "predicate": "Pred_16",
+    "subject": "Sub_0"
+  },
+  {
+    "object": "Obj_16",
+    "predicate": "Pred_6",
+    "subject": "Sub_0"
+  },
+  {
+    "object": "Obj_10",
+    "predicate": "Pred_11",
+    "subject": "Sub_1"
+  },
+  {
+    "object": "Obj_3",
+    "predicate": "Pred_4",
+    "subject": "Sub_1"
+  },
+  {
+    "object": "Obj_46",
+    "predicate": "Pred_5",
+    "subject": "Sub_1"
+  },
+  {
+    "object": "Obj_36",
+    "predicate": "Pred_6",
+    "subject": "Sub_1"
+  },
+  {
+    "object": "Obj_14",
+    "predicate": "Pred_2",
+    "subject": "Sub_11"
+  },
+  {
+    "object": "Obj_13",
+    "predicate": "Pred_4",
+    "subject": "Sub_11"
+  },
+  {
+    "object": "Obj_0",
+    "predicate": "Pred_6",
+    "subject": "Sub_11"
+  },
+  {
+    "object": "Obj_44",
+    "predicate": "Pred_8",
+    "subject": "Sub_11"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_14",
+    "subject": "Sub_12"
+  },
+  {
+    "object": "Obj_38",
+    "predicate": "Pred_15",
+    "subject": "Sub_12"
+  },
+  {
+    "object": "Obj_27",
+    "predicate": "Pred_19",
+    "subject": "Sub_12"
+  },
+  {
+    "object": "Obj_42",
+    "predicate": "Pred_11",
+    "subject": "Sub_13"
+  },
+  {
+    "object": "Obj_3",
+    "predicate": "Pred_15",
+    "subject": "Sub_13"
+  },
+  {
+    "object": "Obj_44",
+    "predicate": "Pred_6",
+    "subject": "Sub_14"
+  },
+  {
+    "object": "Obj_47",
+    "predicate": "Pred_8",
+    "subject": "Sub_14"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_0",
+    "subject": "Sub_15"
+  },
+  {
+    "object": "Obj_36",
+    "predicate": "Pred_10",
+    "subject": "Sub_15"
+  },
+  {
+    "object": "Obj_43",
+    "predicate": "Pred_13",
+    "subject": "Sub_15"
+  },
+  {
+    "object": "Obj_39",
+    "predicate": "Pred_17",
+    "subject": "Sub_15"
+  },
+  {
+    "object": "Obj_32",
+    "predicate": "Pred_19",
+    "subject": "Sub_15"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_13",
+    "subject": "Sub_16"
+  },
+  {
+    "object": "Obj_47",
+    "predicate": "Pred_19",
+    "subject": "Sub_16"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_7",
+    "subject": "Sub_16"
+  },
+  {
+    "object": "Obj_39",
+    "predicate": "Pred_0",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_49",
+    "predicate": "Pred_11",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_5",
+    "predicate": "Pred_13",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_49",
+    "predicate": "Pred_15",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_50",
+    "predicate": "Pred_16",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_41",
+    "predicate": "Pred_19",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_12",
+    "predicate": "Pred_4",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_44",
+    "predicate": "Pred_6",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_48",
+    "predicate": "Pred_9",
+    "subject": "Sub_17"
+  },
+  {
+    "object": "Obj_50",
+    "predicate": "Pred_10",
+    "subject": "Sub_18"
+  },
+  {
+    "object": "Obj_17",
+    "predicate": "Pred_11",
+    "subject": "Sub_18"
+  },
+  {
+    "object": "Obj_21",
+    "predicate": "Pred_10",
+    "subject": "Sub_19"
+  },
+  {
+    "object": "Obj_17",
+    "predicate": "Pred_16",
+    "subject": "Sub_19"
+  },
+  {
+    "object": "Obj_21",
+    "predicate": "Pred_2",
+    "subject": "Sub_19"
+  },
+  {
+    "object": "Obj_24",
+    "predicate": "Pred_20",
+    "subject": "Sub_19"
+  },
+  {
+    "object": "Obj_24",
+    "predicate": "Pred_5",
+    "subject": "Sub_19"
+  },
+  {
+    "object": "Obj_47",
+    "predicate": "Pred_8",
+    "subject": "Sub_19"
+  },
+  {
+    "object": "Obj_32",
+    "predicate": "Pred_4",
+    "subject": "Sub_2"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_5",
+    "subject": "Sub_2"
+  },
+  {
+    "object": "Obj_37",
+    "predicate": "Pred_9",
+    "subject": "Sub_2"
+  },
+  {
+    "object": "Obj_47",
+    "predicate": "Pred_17",
+    "subject": "Sub_20"
+  },
+  {
+    "object": "Obj_49",
+    "predicate": "Pred_11",
+    "subject": "Sub_21"
+  },
+  {
+    "object": "Obj_8",
+    "predicate": "Pred_13",
+    "subject": "Sub_21"
+  },
+  {
+    "object": "Obj_19",
+    "predicate": "Pred_20",
+    "subject": "Sub_21"
+  },
+  {
+    "object": "Obj_41",
+    "predicate": "Pred_3",
+    "subject": "Sub_21"
+  },
+  {
+    "object": "Obj_48",
+    "predicate": "Pred_8",
+    "subject": "Sub_21"
+  },
+  {
+    "object": "Obj_35",
+    "predicate": "Pred_13",
+    "subject": "Sub_22"
+  },
+  {
+    "object": "Obj_13",
+    "predicate": "Pred_14",
+    "subject": "Sub_22"
+  },
+  {
+    "object": "Obj_4",
+    "predicate": "Pred_18",
+    "subject": "Sub_22"
+  },
+  {
+    "object": "Obj_28",
+    "predicate": "Pred_7",
+    "subject": "Sub_22"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_3",
+    "subject": "Sub_23"
+  },
+  {
+    "object": "Obj_6",
+    "predicate": "Pred_8",
+    "subject": "Sub_23"
+  },
+  {
+    "object": "Obj_26",
+    "predicate": "Pred_15",
+    "subject": "Sub_24"
+  },
+  {
+    "object": "Obj_47",
+    "predicate": "Pred_18",
+    "subject": "Sub_24"
+  },
+  {
+    "object": "Obj_39",
+    "predicate": "Pred_19",
+    "subject": "Sub_24"
+  },
+  {
+    "object": "Obj_37",
+    "predicate": "Pred_2",
+    "subject": "Sub_24"
+  },
+  {
+    "object": "Obj_40",
+    "predicate": "Pred_20",
+    "subject": "Sub_24"
+  },
+  {
+    "object": "Obj_37",
+    "predicate": "Pred_8",
+    "subject": "Sub_24"
+  },
+  {
+    "object": "Obj_23",
+    "predicate": "Pred_11",
+    "subject": "Sub_25"
+  },
+  {
+    "object": "Obj_21",
+    "predicate": "Pred_12",
+    "subject": "Sub_25"
+  },
+  {
+    "object": "Obj_43",
+    "predicate": "Pred_13",
+    "subject": "Sub_25"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_2",
+    "subject": "Sub_25"
+  },
+  {
+    "object": "Obj_41",
+    "predicate": "Pred_12",
+    "subject": "Sub_26"
+  },
+  {
+    "object": "Obj_34",
+    "predicate": "Pred_13",
+    "subject": "Sub_26"
+  },
+  {
+    "object": "Obj_43",
+    "predicate": "Pred_2",
+    "subject": "Sub_26"
+  },
+  {
+    "object": "Obj_48",
+    "predicate": "Pred_6",
+    "subject": "Sub_26"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_11",
+    "subject": "Sub_27"
+  },
+  {
+    "object": "Obj_26",
+    "predicate": "Pred_20",
+    "subject": "Sub_27"
+  },
+  {
+    "object": "Obj_34",
+    "predicate": "Pred_3",
+    "subject": "Sub_27"
+  },
+  {
+    "object": "Obj_10",
+    "predicate": "Pred_6",
+    "subject": "Sub_27"
+  },
+  {
+    "object": "Obj_2",
+    "predicate": "Pred_11",
+    "subject": "Sub_28"
+  },
+  {
+    "object": "Obj_49",
+    "predicate": "Pred_12",
+    "subject": "Sub_28"
+  },
+  {
+    "object": "Obj_37",
+    "predicate": "Pred_15",
+    "subject": "Sub_28"
+  },
+  {
+    "object": "Obj_21",
+    "predicate": "Pred_11",
+    "subject": "Sub_29"
+  },
+  {
+    "object": "Obj_12",
+    "predicate": "Pred_20",
+    "subject": "Sub_29"
+  },
+  {
+    "object": "Obj_29",
+    "predicate": "Pred_11",
+    "subject": "Sub_3"
+  },
+  {
+    "object": "Obj_16",
+    "predicate": "Pred_7",
+    "subject": "Sub_3"
+  },
+  {
+    "object": "Obj_49",
+    "predicate": "Pred_11",
+    "subject": "Sub_30"
+  },
+  {
+    "object": "Obj_27",
+    "predicate": "Pred_12",
+    "subject": "Sub_30"
+  },
+  {
+    "object": "Obj_20",
+    "predicate": "Pred_17",
+    "subject": "Sub_30"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_4",
+    "subject": "Sub_30"
+  },
+  {
+    "object": "Obj_21",
+    "predicate": "Pred_7",
+    "subject": "Sub_30"
+  },
+  {
+    "object": "Obj_10",
+    "predicate": "Pred_3",
+    "subject": "Sub_31"
+  },
+  {
+    "object": "Obj_15",
+    "predicate": "Pred_5",
+    "subject": "Sub_31"
+  },
+  {
+    "object": "Obj_16",
+    "predicate": "Pred_12",
+    "subject": "Sub_32"
+  },
+  {
+    "object": "Obj_1",
+    "predicate": "Pred_2",
+    "subject": "Sub_32"
+  },
+  {
+    "object": "Obj_15",
+    "predicate": "Pred_20",
+    "subject": "Sub_32"
+  },
+  {
+    "object": "Obj_36",
+    "predicate": "Pred_10",
+    "subject": "Sub_33"
+  },
+  {
+    "object": "Obj_4",
+    "predicate": "Pred_13",
+    "subject": "Sub_33"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_15",
+    "subject": "Sub_33"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_19",
+    "subject": "Sub_33"
+  },
+  {
+    "object": "Obj_50",
+    "predicate": "Pred_5",
+    "subject": "Sub_33"
+  },
+  {
+    "object": "Obj_12",
+    "predicate": "Pred_6",
+    "subject": "Sub_34"
+  },
+  {
+    "object": "Obj_33",
+    "predicate": "Pred_16",
+    "subject": "Sub_35"
+  },
+  {
+    "object": "Obj_28",
+    "predicate": "Pred_4",
+    "subject": "Sub_35"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_8",
+    "subject": "Sub_35"
+  },
+  {
+    "object": "Obj_39",
+    "predicate": "Pred_13",
+    "subject": "Sub_36"
+  },
+  {
+    "object": "Obj_50",
+    "predicate": "Pred_16",
+    "subject": "Sub_36"
+  },
+  {
+    "object": "Obj_15",
+    "predicate": "Pred_20",
+    "subject": "Sub_36"
+  },
+  {
+    "object": "Obj_29",
+    "predicate": "Pred_7",
+    "subject": "Sub_36"
+  },
+  {
+    "object": "Obj_40",
+    "predicate": "Pred_10",
+    "subject": "Sub_37"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_12",
+    "subject": "Sub_38"
+  },
+  {
+    "object": "Obj_47",
+    "predicate": "Pred_13",
+    "subject": "Sub_38"
+  },
+  {
+    "object": "Obj_17",
+    "predicate": "Pred_20",
+    "subject": "Sub_38"
+  },
+  {
+    "object": "Obj_15",
+    "predicate": "Pred_11",
+    "subject": "Sub_39"
+  },
+  {
+    "object": "Obj_19",
+    "predicate": "Pred_15",
+    "subject": "Sub_39"
+  },
+  {
+    "object": "Obj_32",
+    "predicate": "Pred_4",
+    "subject": "Sub_39"
+  },
+  {
+    "object": "Obj_26",
+    "predicate": "Pred_8",
+    "subject": "Sub_39"
+  },
+  {
+    "object": "Obj_17",
+    "predicate": "Pred_0",
+    "subject": "Sub_4"
+  },
+  {
+    "object": "Obj_32",
+    "predicate": "Pred_15",
+    "subject": "Sub_4"
+  },
+  {
+    "object": "Obj_45",
+    "predicate": "Pred_18",
+    "subject": "Sub_4"
+  },
+  {
+    "object": "Obj_39",
+    "predicate": "Pred_19",
+    "subject": "Sub_4"
+  },
+  {
+    "object": "Obj_44",
+    "predicate": "Pred_7",
+    "subject": "Sub_4"
+  },
+  {
+    "object": "Obj_6",
+    "predicate": "Pred_1",
+    "subject": "Sub_40"
+  },
+  {
+    "object": "Obj_28",
+    "predicate": "Pred_10",
+    "subject": "Sub_40"
+  },
+  {
+    "object": "Obj_21",
+    "predicate": "Pred_11",
+    "subject": "Sub_40"
+  },
+  {
+    "object": "Obj_43",
+    "predicate": "Pred_14",
+    "subject": "Sub_41"
+  },
+  {
+    "object": "Obj_1",
+    "predicate": "Pred_15",
+    "subject": "Sub_41"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_15",
+    "subject": "Sub_42"
+  },
+  {
+    "object": "Obj_24",
+    "predicate": "Pred_20",
+    "subject": "Sub_42"
+  },
+  {
+    "object": "Obj_36",
+    "predicate": "Pred_4",
+    "subject": "Sub_42"
+  },
+  {
+    "object": "Obj_39",
+    "predicate": "Pred_9",
+    "subject": "Sub_42"
+  },
+  {
+    "object": "Obj_32",
+    "predicate": "Pred_10",
+    "subject": "Sub_43"
+  },
+  {
+    "object": "Obj_9",
+    "predicate": "Pred_11",
+    "subject": "Sub_43"
+  },
+  {
+    "object": "Obj_14",
+    "predicate": "Pred_20",
+    "subject": "Sub_43"
+  },
+  {
+    "object": "Obj_4",
+    "predicate": "Pred_7",
+    "subject": "Sub_43"
+  },
+  {
+    "object": "Obj_50",
+    "predicate": "Pred_11",
+    "subject": "Sub_44"
+  },
+  {
+    "object": "Obj_36",
+    "predicate": "Pred_18",
+    "subject": "Sub_44"
+  },
+  {
+    "object": "Obj_10",
+    "predicate": "Pred_19",
+    "subject": "Sub_44"
+  },
+  {
+    "object": "Obj_44",
+    "predicate": "Pred_5",
+    "subject": "Sub_44"
+  },
+  {
+    "object": "Obj_7",
+    "predicate": "Pred_13",
+    "subject": "Sub_45"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_17",
+    "subject": "Sub_45"
+  },
+  {
+    "object": "Obj_16",
+    "predicate": "Pred_19",
+    "subject": "Sub_45"
+  },
+  {
+    "object": "Obj_17",
+    "predicate": "Pred_3",
+    "subject": "Sub_45"
+  },
+  {
+    "object": "Obj_17",
+    "predicate": "Pred_9",
+    "subject": "Sub_45"
+  },
+  {
+    "object": "Obj_42",
+    "predicate": "Pred_13",
+    "subject": "Sub_46"
+  },
+  {
+    "object": "Obj_41",
+    "predicate": "Pred_14",
+    "subject": "Sub_46"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_17",
+    "subject": "Sub_47"
+  },
+  {
+    "object": "Obj_34",
+    "predicate": "Pred_13",
+    "subject": "Sub_48"
+  },
+  {
+    "object": "Obj_7",
+    "predicate": "Pred_14",
+    "subject": "Sub_48"
+  },
+  {
+    "object": "Obj_38",
+    "predicate": "Pred_20",
+    "subject": "Sub_48"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_7",
+    "subject": "Sub_48"
+  },
+  {
+    "object": "Obj_10",
+    "predicate": "Pred_9",
+    "subject": "Sub_48"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_2",
+    "subject": "Sub_49"
+  },
+  {
+    "object": "Obj_38",
+    "predicate": "Pred_20",
+    "subject": "Sub_49"
+  },
+  {
+    "object": "Obj_20",
+    "predicate": "Pred_4",
+    "subject": "Sub_49"
+  },
+  {
+    "object": "Obj_32",
+    "predicate": "Pred_9",
+    "subject": "Sub_49"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_12",
+    "subject": "Sub_5"
+  },
+  {
+    "object": "Obj_28",
+    "predicate": "Pred_16",
+    "subject": "Sub_5"
+  },
+  {
+    "object": "Obj_8",
+    "predicate": "Pred_18",
+    "subject": "Sub_5"
+  },
+  {
+    "object": "Obj_2",
+    "predicate": "Pred_3",
+    "subject": "Sub_5"
+  },
+  {
+    "object": "Obj_48",
+    "predicate": "Pred_4",
+    "subject": "Sub_5"
+  },
+  {
+    "object": "Obj_7",
+    "predicate": "Pred_0",
+    "subject": "Sub_50"
+  },
+  {
+    "object": "Obj_9",
+    "predicate": "Pred_14",
+    "subject": "Sub_50"
+  },
+  {
+    "object": "Obj_6",
+    "predicate": "Pred_17",
+    "subject": "Sub_50"
+  },
+  {
+    "object": "Obj_0",
+    "predicate": "Pred_2",
+    "subject": "Sub_50"
+  },
+  {
+    "object": "Obj_12",
+    "predicate": "Pred_3",
+    "subject": "Sub_50"
+  },
+  {
+    "object": "Obj_25",
+    "predicate": "Pred_4",
+    "subject": "Sub_50"
+  },
+  {
+    "object": "Obj_0",
+    "predicate": "Pred_0",
+    "subject": "Sub_6"
+  },
+  {
+    "object": "Obj_22",
+    "predicate": "Pred_17",
+    "subject": "Sub_6"
+  },
+  {
+    "object": "Obj_20",
+    "predicate": "Pred_2",
+    "subject": "Sub_6"
+  },
+  {
+    "object": "Obj_16",
+    "predicate": "Pred_20",
+    "subject": "Sub_6"
+  },
+  {
+    "object": "Obj_19",
+    "predicate": "Pred_9",
+    "subject": "Sub_6"
+  },
+  {
+    "object": "Obj_24",
+    "predicate": "Pred_18",
+    "subject": "Sub_7"
+  },
+  {
+    "object": "Obj_3",
+    "predicate": "Pred_7",
+    "subject": "Sub_7"
+  },
+  {
+    "object": "Obj_2",
+    "predicate": "Pred_15",
+    "subject": "Sub_8"
+  },
+  {
+    "object": "Obj_7",
+    "predicate": "Pred_19",
+    "subject": "Sub_8"
+  },
+  {
+    "object": "Obj_20",
+    "predicate": "Pred_10",
+    "subject": "Sub_9"
+  },
+  {
+    "object": "Obj_34",
+    "predicate": "Pred_17",
+    "subject": "Sub_9"
+  },
+  {
+    "object": "Obj_28",
+    "predicate": "Pred_2",
+    "subject": "Sub_9"
+  },
+  {
+    "object": "Obj_4",
+    "predicate": "Pred_9",
+    "subject": "Sub_9"
+  }
+]

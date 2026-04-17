@@ -1,0 +1,157 @@
+[
+  {
+    "object": "Jack",
+    "predicate": "collaborates with",
+    "subject": "Alex"
+  },
+  {
+    "object": "Denver",
+    "predicate": "is in",
+    "subject": "Alex"
+  },
+  {
+    "object": "Nevada",
+    "predicate": "is located in",
+    "subject": "Alex"
+  },
+  {
+    "object": "KnowledgeBase",
+    "predicate": "is working on",
+    "subject": "Alex"
+  },
+  {
+    "object": "GPUCluster",
+    "predicate": "prefers",
+    "subject": "Alex"
+  },
+  {
+    "object": "Docker",
+    "predicate": "uses",
+    "subject": "Alex"
+  },
+  {
+    "object": "Team_07",
+    "predicate": "collaborates with",
+    "subject": "Emma"
+  },
+  {
+    "object": "Rust",
+    "predicate": "prefers",
+    "subject": "Emma"
+  },
+  {
+    "object": "Jupyter",
+    "predicate": "uses",
+    "subject": "Emma"
+  },
+  {
+    "object": "Task_19",
+    "predicate": "works on",
+    "subject": "Emma"
+  },
+  {
+    "object": "Jane",
+    "predicate": "collaborates with",
+    "subject": "Jack"
+  },
+  {
+    "object": "Emma",
+    "predicate": "is collaborating with",
+    "subject": "Jack"
+  },
+  {
+    "object": "VSCode",
+    "predicate": "uses",
+    "subject": "Jack"
+  },
+  {
+    "object": "PipelineX",
+    "predicate": "works on",
+    "subject": "Jack"
+  },
+  {
+    "object": "Emma",
+    "predicate": "collaborates with",
+    "subject": "Jane"
+  },
+  {
+    "object": "Austin",
+    "predicate": "is in",
+    "subject": "Jane"
+  },
+  {
+    "object": "Graphs",
+    "predicate": "prefers",
+    "subject": "Jane"
+  },
+  {
+    "object": "AgentMemory",
+    "predicate": "researches",
+    "subject": "Jane"
+  },
+  {
+    "object": "VSCode",
+    "predicate": "uses",
+    "subject": "Jane"
+  },
+  {
+    "object": "Team_10",
+    "predicate": "collaborates with",
+    "subject": "Noah"
+  },
+  {
+    "object": "Denver",
+    "predicate": "is based in",
+    "subject": "Noah"
+  },
+  {
+    "object": "Boston",
+    "predicate": "is located in",
+    "subject": "Noah"
+  },
+  {
+    "object": "Automation",
+    "predicate": "prefers",
+    "subject": "Noah"
+  },
+  {
+    "object": "PyTorch",
+    "predicate": "uses",
+    "subject": "Noah"
+  },
+  {
+    "object": "PipelineX",
+    "predicate": "works on",
+    "subject": "Noah"
+  },
+  {
+    "object": "KnowledgeBase",
+    "predicate": "works on",
+    "subject": "User_17"
+  },
+  {
+    "object": "Service_07",
+    "predicate": "is dependent on",
+    "subject": "User_22"
+  },
+  {
+    "object": "Jupyter",
+    "predicate": "uses",
+    "subject": "User_25"
+  },
+  {
+    "object": "Project_03",
+    "predicate": "works on",
+    "subject": "User_26"
+  },
+  {
+    "object": "Docker",
+    "predicate": "uses",
+    "subject": "User_33"
+  },
+  {
+    "object": "PyTorch",
+    "predicate": "uses",
+    "subject": "User_34"
+  }
+]

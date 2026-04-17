@@ -1,0 +1,9 @@
+{
+  "backend": "vllm",
+  "batch_size": 51,
+  "executor": "sequential",
+  "resolve_pronouns": false,
+  "store": "memory",
+  "visualize_dag": true,
+  "workload": "workloads/real/w_200_hot_0.5.json"
+}

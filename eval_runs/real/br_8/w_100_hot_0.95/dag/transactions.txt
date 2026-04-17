@@ -1,0 +1,1200 @@
+-----
+update_id: 0
+subject: Noah
+predicate: prefers
+requested_object: Rust
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Rust
+after_value: Rust
+batch_index: 0
+layer_index: 0
+-----
+update_id: 1
+subject: Alex
+predicate: uses
+requested_object: CUDA
+previous_object: None
+before_value: None
+action: APPLY
+new_value: CUDA
+after_value: CUDA
+batch_index: 0
+layer_index: 0
+-----
+update_id: 3
+subject: Emma
+predicate: uses
+requested_object: Jupyter
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Jupyter
+after_value: Jupyter
+batch_index: 0
+layer_index: 0
+-----
+update_id: 4
+subject: Jane
+predicate: researches
+requested_object: AgentMemory
+previous_object: None
+before_value: None
+action: APPLY
+new_value: AgentMemory
+after_value: AgentMemory
+batch_index: 0
+layer_index: 0
+-----
+update_id: 10
+subject: User_34
+predicate: uses
+requested_object: PyTorch
+previous_object: None
+before_value: None
+action: APPLY
+new_value: PyTorch
+after_value: PyTorch
+batch_index: 0
+layer_index: 0
+-----
+update_id: 5
+subject: Noah
+predicate: uses
+requested_object: VSCode
+previous_object: None
+before_value: None
+action: APPLY
+new_value: VSCode
+after_value: VSCode
+batch_index: 0
+layer_index: 1
+-----
+update_id: 2
+subject: Alex
+predicate: is in
+requested_object: Denver
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Denver
+after_value: Denver
+batch_index: 0
+layer_index: 1
+-----
+update_id: 7
+subject: Jane
+predicate: uses
+requested_object: VSCode
+previous_object: None
+before_value: None
+action: APPLY
+new_value: VSCode
+after_value: VSCode
+batch_index: 0
+layer_index: 1
+-----
+update_id: 6
+subject: Noah
+predicate: works on
+requested_object: PipelineX
+previous_object: None
+before_value: None
+action: APPLY
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 0
+layer_index: 2
+-----
+update_id: 12
+subject: Alex
+predicate: prefers
+requested_object: GPUCluster
+previous_object: None
+before_value: None
+action: APPLY
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 0
+layer_index: 2
+-----
+update_id: 8
+subject: Noah
+predicate: prefers
+requested_object: Automation
+previous_object: Rust
+before_value: Rust
+action: APPLY
+new_value: Automation
+after_value: Automation
+batch_index: 0
+layer_index: 3
+-----
+update_id: 9
+subject: Noah
+predicate: uses
+requested_object: CUDA
+previous_object: VSCode
+before_value: VSCode
+action: APPLY
+new_value: CUDA
+after_value: CUDA
+batch_index: 0
+layer_index: 4
+-----
+update_id: 11
+subject: Noah
+predicate: works on
+requested_object: KnowledgeBase
+previous_object: PipelineX
+before_value: PipelineX
+action: APPLY
+new_value: KnowledgeBase
+after_value: KnowledgeBase
+batch_index: 0
+layer_index: 5
+-----
+update_id: 13
+subject: Jack
+predicate: uses
+requested_object: CUDA
+previous_object: None
+before_value: None
+action: APPLY
+new_value: CUDA
+after_value: CUDA
+batch_index: 1
+layer_index: 0
+-----
+update_id: 14
+subject: User_17
+predicate: works on
+requested_object: KnowledgeBase
+previous_object: None
+before_value: None
+action: APPLY
+new_value: KnowledgeBase
+after_value: KnowledgeBase
+batch_index: 1
+layer_index: 0
+-----
+update_id: 16
+subject: Jane
+predicate: prefers
+requested_object: Rust
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Rust
+after_value: Rust
+batch_index: 1
+layer_index: 0
+-----
+update_id: 17
+subject: Emma
+predicate: prefers
+requested_object: Rust
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Rust
+after_value: Rust
+batch_index: 1
+layer_index: 0
+-----
+update_id: 18
+subject: User_22
+predicate: is dependent on
+requested_object: Service_07
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Service_07
+after_value: Service_07
+batch_index: 1
+layer_index: 0
+-----
+update_id: 20
+subject: Noah
+predicate: is based in
+requested_object: Denver
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Denver
+after_value: Denver
+batch_index: 1
+layer_index: 0
+-----
+update_id: 21
+subject: Alex
+predicate: uses
+requested_object: VSCode
+previous_object: CUDA
+before_value: CUDA
+action: APPLY
+new_value: VSCode
+after_value: VSCode
+batch_index: 1
+layer_index: 0
+-----
+update_id: 22
+subject: User_25
+predicate: uses
+requested_object: Jupyter
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Jupyter
+after_value: Jupyter
+batch_index: 1
+layer_index: 0
+-----
+update_id: 15
+subject: Jack
+predicate: is collaborating with
+requested_object: Emma
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Emma
+after_value: Emma
+batch_index: 1
+layer_index: 1
+-----
+update_id: 19
+subject: Jane
+predicate: prefers
+requested_object: GPUCluster
+previous_object: Rust
+before_value: Rust
+action: APPLY
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 1
+layer_index: 1
+-----
+update_id: 25
+subject: Emma
+predicate: collaborates with
+requested_object: Team_07
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Team_07
+after_value: Team_07
+batch_index: 1
+layer_index: 1
+-----
+update_id: 24
+subject: Noah
+predicate: collaborates with
+requested_object: User_34
+previous_object: None
+before_value: None
+action: APPLY
+new_value: User_34
+after_value: User_34
+batch_index: 1
+layer_index: 1
+-----
+update_id: 23
+subject: Jack
+predicate: works on
+requested_object: Scheduler
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Scheduler
+after_value: Scheduler
+batch_index: 1
+layer_index: 2
+-----
+update_id: 26
+subject: Noah
+predicate: uses
+requested_object: PyTorch
+previous_object: CUDA
+before_value: CUDA
+action: APPLY
+new_value: PyTorch
+after_value: PyTorch
+batch_index: 2
+layer_index: 0
+-----
+update_id: 27
+subject: Jane
+predicate: prefers
+requested_object: Python
+previous_object: GPUCluster
+before_value: GPUCluster
+action: APPLY
+new_value: Python
+after_value: Python
+batch_index: 2
+layer_index: 0
+-----
+update_id: 28
+subject: Alex
+predicate: collaborates with
+requested_object: Jack
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Jack
+after_value: Jack
+batch_index: 2
+layer_index: 0
+-----
+update_id: 29
+subject: Emma
+predicate: works on
+requested_object: TaskAlpha
+previous_object: None
+before_value: None
+action: APPLY
+new_value: TaskAlpha
+after_value: TaskAlpha
+batch_index: 2
+layer_index: 0
+-----
+update_id: 32
+subject: Jack
+predicate: collaborates with
+requested_object: Jane
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Jane
+after_value: Jane
+batch_index: 2
+layer_index: 0
+-----
+update_id: 33
+subject: Noah
+predicate: is located in
+requested_object: Boston
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Boston
+after_value: Boston
+batch_index: 2
+layer_index: 1
+-----
+update_id: 30
+subject: Jane
+predicate: is in
+requested_object: Austin
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Austin
+after_value: Austin
+batch_index: 2
+layer_index: 1
+-----
+update_id: 31
+subject: Alex
+predicate: is located in
+requested_object: Nevada
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Nevada
+after_value: Nevada
+batch_index: 2
+layer_index: 1
+-----
+update_id: 34
+subject: Emma
+predicate: prefers
+requested_object: Rust
+previous_object: Rust
+before_value: Rust
+action: NO_OP
+new_value: Rust
+after_value: Rust
+batch_index: 2
+layer_index: 1
+-----
+update_id: 38
+subject: Jack
+predicate: uses
+requested_object: VSCode
+previous_object: CUDA
+before_value: CUDA
+action: APPLY
+new_value: VSCode
+after_value: VSCode
+batch_index: 2
+layer_index: 1
+-----
+update_id: 35
+subject: Jane
+predicate: prefers
+requested_object: Python
+previous_object: Python
+before_value: Python
+action: NO_OP
+new_value: Python
+after_value: Python
+batch_index: 2
+layer_index: 2
+-----
+update_id: 37
+subject: Alex
+predicate: is working on
+requested_object: KnowledgeBase
+previous_object: None
+before_value: None
+action: APPLY
+new_value: KnowledgeBase
+after_value: KnowledgeBase
+batch_index: 2
+layer_index: 2
+-----
+update_id: 36
+subject: Jane
+predicate: prefers
+requested_object: Graphs
+previous_object: Python
+before_value: Python
+action: APPLY
+new_value: Graphs
+after_value: Graphs
+batch_index: 2
+layer_index: 3
+-----
+update_id: 39
+subject: Jack
+predicate: uses
+requested_object: VSCode
+previous_object: VSCode
+before_value: VSCode
+action: NO_OP
+new_value: VSCode
+after_value: VSCode
+batch_index: 3
+layer_index: 0
+-----
+update_id: 40
+subject: Jane
+predicate: collaborates with
+requested_object: Emma
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Emma
+after_value: Emma
+batch_index: 3
+layer_index: 0
+-----
+update_id: 41
+subject: Noah
+predicate: collaborates with
+requested_object: Team_10
+previous_object: User_34
+before_value: User_34
+action: APPLY
+new_value: Team_10
+after_value: Team_10
+batch_index: 3
+layer_index: 0
+-----
+update_id: 42
+subject: User_33
+predicate: uses
+requested_object: Docker
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Docker
+after_value: Docker
+batch_index: 3
+layer_index: 0
+-----
+update_id: 43
+subject: Alex
+predicate: uses
+requested_object: Docker
+previous_object: VSCode
+before_value: VSCode
+action: APPLY
+new_value: Docker
+after_value: Docker
+batch_index: 3
+layer_index: 0
+-----
+update_id: 46
+subject: User_26
+predicate: works on
+requested_object: Project_03
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Project_03
+after_value: Project_03
+batch_index: 3
+layer_index: 0
+-----
+update_id: 47
+subject: Emma
+predicate: works on
+requested_object: Task_19
+previous_object: TaskAlpha
+before_value: TaskAlpha
+action: APPLY
+new_value: Task_19
+after_value: Task_19
+batch_index: 3
+layer_index: 0
+-----
+update_id: 49
+subject: Jack
+predicate: works on
+requested_object: PipelineX
+previous_object: Scheduler
+before_value: Scheduler
+action: APPLY
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 3
+layer_index: 1
+-----
+update_id: 50
+subject: Jane
+predicate: uses
+requested_object: Jupyter
+previous_object: VSCode
+before_value: VSCode
+action: APPLY
+new_value: Jupyter
+after_value: Jupyter
+batch_index: 3
+layer_index: 1
+-----
+update_id: 45
+subject: Noah
+predicate: works on
+requested_object: PipelineX
+previous_object: KnowledgeBase
+before_value: KnowledgeBase
+action: APPLY
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 3
+layer_index: 1
+-----
+update_id: 44
+subject: Alex
+predicate: uses
+requested_object: Jupyter
+previous_object: Docker
+before_value: Docker
+action: NO_OP
+new_value: Docker
+after_value: Docker
+batch_index: 3
+layer_index: 1
+-----
+update_id: 51
+subject: Jane
+predicate: prefers
+requested_object: GPUCluster
+previous_object: Graphs
+before_value: Graphs
+action: APPLY
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 3
+layer_index: 2
+-----
+update_id: 48
+subject: Noah
+predicate: collaborates with
+requested_object: User_40
+previous_object: Team_10
+before_value: Team_10
+action: NO_OP
+new_value: Team_10
+after_value: Team_10
+batch_index: 3
+layer_index: 2
+-----
+update_id: 52
+subject: Alex
+predicate: collaborates with
+requested_object: Jane
+previous_object: Jack
+before_value: Jack
+action: APPLY
+new_value: Jane
+after_value: Jane
+batch_index: 4
+layer_index: 0
+-----
+update_id: 53
+subject: Jane
+predicate: works on
+requested_object: Scheduler
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Scheduler
+after_value: Scheduler
+batch_index: 4
+layer_index: 0
+-----
+update_id: 54
+subject: Jack
+predicate: is based in
+requested_object: Denver
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Denver
+after_value: Denver
+batch_index: 4
+layer_index: 0
+-----
+update_id: 55
+subject: Emma
+predicate: collaborates with
+requested_object: Alex
+previous_object: Team_07
+before_value: Team_07
+action: NO_OP
+new_value: Team_07
+after_value: Team_07
+batch_index: 4
+layer_index: 0
+-----
+update_id: 56
+subject: Noah
+predicate: works on
+requested_object: TaskAlpha
+previous_object: PipelineX
+before_value: PipelineX
+action: NO_OP
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 4
+layer_index: 0
+-----
+update_id: 57
+subject: Alex
+predicate: uses
+requested_object: Jupyter
+previous_object: Docker
+before_value: Docker
+action: NO_OP
+new_value: Docker
+after_value: Docker
+batch_index: 4
+layer_index: 1
+-----
+update_id: 58
+subject: Jack
+predicate: prefers
+requested_object: GPUCluster
+previous_object: None
+before_value: None
+action: APPLY
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 4
+layer_index: 1
+-----
+update_id: 62
+subject: Emma
+predicate: prefers
+requested_object: Graphs
+previous_object: Rust
+before_value: Rust
+action: APPLY
+new_value: Graphs
+after_value: Graphs
+batch_index: 4
+layer_index: 1
+-----
+update_id: 60
+subject: Noah
+predicate: prefers
+requested_object: Automation
+previous_object: Automation
+before_value: Automation
+action: NO_OP
+new_value: Automation
+after_value: Automation
+batch_index: 4
+layer_index: 1
+-----
+update_id: 59
+subject: Alex
+predicate: is working on
+requested_object: KnowledgeBase
+previous_object: KnowledgeBase
+before_value: KnowledgeBase
+action: NO_OP
+new_value: KnowledgeBase
+after_value: KnowledgeBase
+batch_index: 4
+layer_index: 2
+-----
+update_id: 61
+subject: Jack
+predicate: prefers
+requested_object: GPUCluster
+previous_object: GPUCluster
+before_value: GPUCluster
+action: NO_OP
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 4
+layer_index: 2
+-----
+update_id: 63
+subject: Emma
+predicate: is based in
+requested_object: Seattle
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Seattle
+after_value: Seattle
+batch_index: 4
+layer_index: 2
+-----
+update_id: 64
+subject: Noah
+predicate: prefers
+requested_object: Python
+previous_object: Automation
+before_value: Automation
+action: NO_OP
+new_value: Automation
+after_value: Automation
+batch_index: 4
+layer_index: 2
+-----
+update_id: 65
+subject: Alex
+predicate: collaborates with
+requested_object: Jane
+previous_object: Jane
+before_value: Jane
+action: NO_OP
+new_value: Jane
+after_value: Jane
+batch_index: 5
+layer_index: 0
+-----
+update_id: 67
+subject: Emma
+predicate: is located in
+requested_object: Nevada
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Nevada
+after_value: Nevada
+batch_index: 5
+layer_index: 0
+-----
+update_id: 68
+subject: Jane
+predicate: collaborates with
+requested_object: Jack
+previous_object: Emma
+before_value: Emma
+action: APPLY
+new_value: Jack
+after_value: Jack
+batch_index: 5
+layer_index: 0
+-----
+update_id: 69
+subject: User_04
+predicate: works on
+requested_object: PipelineX
+previous_object: None
+before_value: None
+action: APPLY
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 5
+layer_index: 0
+-----
+update_id: 72
+subject: Jack
+predicate: is based in
+requested_object: Austin
+previous_object: Denver
+before_value: Denver
+action: APPLY
+new_value: Austin
+after_value: Austin
+batch_index: 5
+layer_index: 0
+-----
+update_id: 74
+subject: Noah
+predicate: uses
+requested_object: PyTorch
+previous_object: PyTorch
+before_value: PyTorch
+action: NO_OP
+new_value: PyTorch
+after_value: PyTorch
+batch_index: 5
+layer_index: 0
+-----
+update_id: 66
+subject: Alex
+predicate: prefers
+requested_object: GPUCluster
+previous_object: GPUCluster
+before_value: GPUCluster
+action: NO_OP
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 5
+layer_index: 1
+-----
+update_id: 73
+subject: Emma
+predicate: works on
+requested_object: PipelineX
+previous_object: Task_19
+before_value: Task_19
+action: APPLY
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 5
+layer_index: 1
+-----
+update_id: 77
+subject: Noah
+predicate: is in
+requested_object: Nevada
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Nevada
+after_value: Nevada
+batch_index: 5
+layer_index: 1
+-----
+update_id: 70
+subject: Alex
+predicate: prefers
+requested_object: Rust
+previous_object: GPUCluster
+before_value: GPUCluster
+action: APPLY
+new_value: Rust
+after_value: Rust
+batch_index: 5
+layer_index: 2
+-----
+update_id: 76
+subject: Emma
+predicate: works on
+requested_object: TaskAlpha
+previous_object: PipelineX
+before_value: PipelineX
+action: NO_OP
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 5
+layer_index: 2
+-----
+update_id: 71
+subject: Alex
+predicate: uses
+requested_object: Kubernetes
+previous_object: Docker
+before_value: Docker
+action: APPLY
+new_value: Kubernetes
+after_value: Kubernetes
+batch_index: 5
+layer_index: 3
+-----
+update_id: 75
+subject: Alex
+predicate: works on
+requested_object: PipelineX
+previous_object: None
+before_value: None
+action: APPLY
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 5
+layer_index: 4
+-----
+update_id: 78
+subject: Emma
+predicate: prefers
+requested_object: Rust
+previous_object: Graphs
+before_value: Graphs
+action: NO_OP
+new_value: Graphs
+after_value: Graphs
+batch_index: 6
+layer_index: 0
+-----
+update_id: 81
+subject: Noah
+predicate: is in
+requested_object: Seattle
+previous_object: Nevada
+before_value: Nevada
+action: NO_OP
+new_value: Nevada
+after_value: Nevada
+batch_index: 6
+layer_index: 0
+-----
+update_id: 83
+subject: Alex
+predicate: is located in
+requested_object: Seattle
+previous_object: Nevada
+before_value: Nevada
+action: NO_OP
+new_value: Nevada
+after_value: Nevada
+batch_index: 6
+layer_index: 0
+-----
+update_id: 84
+subject: Jack
+predicate: prefers
+requested_object: Rust
+previous_object: GPUCluster
+before_value: GPUCluster
+action: APPLY
+new_value: Rust
+after_value: Rust
+batch_index: 6
+layer_index: 0
+-----
+update_id: 85
+subject: Jane
+predicate: is in
+requested_object: Austin
+previous_object: Austin
+before_value: Austin
+action: NO_OP
+new_value: Austin
+after_value: Austin
+batch_index: 6
+layer_index: 0
+-----
+update_id: 86
+subject: User_07
+predicate: works on
+requested_object: TaskAlpha
+previous_object: None
+before_value: None
+action: APPLY
+new_value: TaskAlpha
+after_value: TaskAlpha
+batch_index: 6
+layer_index: 0
+-----
+update_id: 89
+subject: User_18
+predicate: studies
+requested_object: Paper_18
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Paper_18
+after_value: Paper_18
+batch_index: 6
+layer_index: 0
+-----
+update_id: 79
+subject: Emma
+predicate: prefers
+requested_object: GPUCluster
+previous_object: Graphs
+before_value: Graphs
+action: APPLY
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 6
+layer_index: 1
+-----
+update_id: 82
+subject: Noah
+predicate: works on
+requested_object: PipelineX
+previous_object: PipelineX
+before_value: PipelineX
+action: NO_OP
+new_value: PipelineX
+after_value: PipelineX
+batch_index: 6
+layer_index: 1
+-----
+update_id: 87
+subject: Jack
+predicate: is located in
+requested_object: Nevada
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Nevada
+after_value: Nevada
+batch_index: 6
+layer_index: 1
+-----
+update_id: 80
+subject: Emma
+predicate: uses
+requested_object: VSCode
+previous_object: Jupyter
+before_value: Jupyter
+action: APPLY
+new_value: VSCode
+after_value: VSCode
+batch_index: 6
+layer_index: 2
+-----
+update_id: 88
+subject: Noah
+predicate: prefers
+requested_object: Automation
+previous_object: Automation
+before_value: Automation
+action: NO_OP
+new_value: Automation
+after_value: Automation
+batch_index: 6
+layer_index: 2
+-----
+update_id: 90
+subject: Jack
+predicate: works on
+requested_object: ProjectAtlas
+previous_object: PipelineX
+before_value: PipelineX
+action: APPLY
+new_value: ProjectAtlas
+after_value: ProjectAtlas
+batch_index: 6
+layer_index: 2
+-----
+update_id: 91
+subject: Team_06
+predicate: prefers
+requested_object: Python
+previous_object: None
+before_value: None
+action: APPLY
+new_value: Python
+after_value: Python
+batch_index: 7
+layer_index: 0
+-----
+update_id: 92
+subject: Jane
+predicate: collaborates with
+requested_object: User_20
+previous_object: Jack
+before_value: Jack
+action: APPLY
+new_value: User_20
+after_value: User_20
+batch_index: 7
+layer_index: 0
+-----
+update_id: 93
+subject: Jack
+predicate: uses
+requested_object: Kubernetes
+previous_object: VSCode
+before_value: VSCode
+action: APPLY
+new_value: Kubernetes
+after_value: Kubernetes
+batch_index: 7
+layer_index: 0
+-----
+update_id: 94
+subject: Emma
+predicate: collaborates with
+requested_object: Alex
+previous_object: Team_07
+before_value: Team_07
+action: NO_OP
+new_value: Team_07
+after_value: Team_07
+batch_index: 7
+layer_index: 0
+-----
+update_id: 95
+subject: Alex
+predicate: is in
+requested_object: Denver
+previous_object: Denver
+before_value: Denver
+action: NO_OP
+new_value: Denver
+after_value: Denver
+batch_index: 7
+layer_index: 0
+-----
+update_id: 98
+subject: Noah
+predicate: is in
+requested_object: Seattle
+previous_object: Nevada
+before_value: Nevada
+action: NO_OP
+new_value: Nevada
+after_value: Nevada
+batch_index: 7
+layer_index: 0
+-----
+update_id: 96
+subject: Jane
+predicate: prefers
+requested_object: Graphs
+previous_object: GPUCluster
+before_value: GPUCluster
+action: APPLY
+new_value: Graphs
+after_value: Graphs
+batch_index: 7
+layer_index: 1
+-----
+update_id: 97
+subject: Alex
+predicate: prefers
+requested_object: GPUCluster
+previous_object: Rust
+before_value: Rust
+action: APPLY
+new_value: GPUCluster
+after_value: GPUCluster
+batch_index: 7
+layer_index: 1
+-----
+update_id: 99
+subject: Alex
+predicate: collaborates with
+requested_object: User_21
+previous_object: Jane
+before_value: Jane
+action: APPLY
+new_value: User_21
+after_value: User_21
+batch_index: 7
+layer_index: 2

@@ -1,0 +1,56 @@
+(Alex, is based in) -> SanDiego
+(Alex, is collaborating with) -> Noah
+(Alex, is dependent on) -> Service_10
+(Alex, is located in) -> Austin
+(Alex, prefers) -> Automation
+(Alex, uses) -> Notebook
+(Alex, works on) -> ProjectAtlas
+(Emma, collaborates with) -> Team_07
+(Emma, is collaborating with) -> User_18
+(Emma, is dependent on) -> Service_01
+(Emma, is located in) -> San Diego
+(Emma, prefers) -> Rust
+(Emma, uses) -> Docker
+(Emma, works on) -> TaskAlpha
+(Jack, is based in) -> Miami
+(Jack, is collaborating with) -> Emma
+(Jack, is located in) -> Nevada
+(Jack, prefers) -> GPUCluster
+(Jack, researches) -> Paper_14
+(Jack, uses) -> Kubernetes
+(Jack, works on) -> Project_03
+(Jane, collaborates with) -> User_20
+(Jane, is in) -> Austin
+(Jane, prefers) -> Python
+(Jane, uses) -> VSCode
+(Jane, works on) -> Task_20
+(Noah, belongs to) -> Group_03
+(Noah, collaborates with) -> User_18
+(Noah, depends on) -> Service_03
+(Noah, is based in) -> Denver
+(Noah, is in) -> Seattle
+(Noah, is located in) -> Austin
+(Noah, is working on) -> KnowledgeBase
+(Noah, prefers) -> Automation
+(Noah, uses) -> CUDA
+(Noah, works on) -> Task_16
+(Team_02, researches) -> Paper_06
+(Team_04, researches) -> Paper_12
+(Team_06, prefers) -> Python
+(Team_06, researches) -> Scheduling
+(Team_08, works on) -> TaskAlpha
+(User_07, works on) -> Project_09
+(User_10, uses) -> PyTorch
+(User_10, works on) -> KnowledgeBase
+(User_11, is a member of) -> Group_11
+(User_16, works on) -> ProjectAtlas
+(User_18, prefers) -> Python
+(User_18, studies) -> Paper_18
+(User_22, is dependent on) -> Service_07
+(User_24, collaborates with) -> Emma
+(User_25, uses) -> Jupyter
+(User_30, uses) -> Jupyter
+(User_31, prefers) -> Python
+(User_31, uses) -> Jupyter
+(User_34, uses) -> PyTorch
+(User_34, works on) -> TaskAlpha

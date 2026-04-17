@@ -1,0 +1,48 @@
+(Alex, prefers) -> Optimization
+(Alex, uses) -> VSCode
+(Alex, works on) -> TaskAlpha
+(Emma, is based in) -> Chicago
+(Emma, is located in) -> SanDiego
+(Emma, prefers) -> Rust
+(Emma, uses) -> Jupyter
+(Jack, collaborates with) -> User_20
+(Jack, prefers) -> Java
+(Jack, researches) -> Paper_14
+(Jane, is based in) -> Phoenix
+(Jane, is part of) -> Group_15
+(Jane, prefers) -> Python
+(Jane, researches) -> AgentMemory
+(Jane, works on) -> Task_20
+(Noah, collaborates with) -> Emma
+(Noah, is based in) -> Phoenix
+(Noah, is located in) -> Miami
+(Noah, prefers) -> GPUCluster
+(Noah, works on) -> Task_12
+(Team_01, is located in) -> Seattle
+(Team_01, works on) -> PipelineX
+(Team_03, studies) -> Paper_13
+(Team_03, works on) -> Task_12
+(Team_04, prefers) -> Java
+(Team_07, researches) -> Paper_18
+(Team_08, works on) -> TaskAlpha
+(Team_09, is dependent on) -> Service_06
+(Team_10, prefers) -> C++
+(Team_10, researches) -> Paper_13
+(User_13, uses) -> Tool_01
+(User_16, works on) -> Project_08
+(User_17, collaborates with) -> User_04
+(User_18, collaborates with) -> User_10
+(User_18, is located in) -> Nevada
+(User_18, prefers) -> Python
+(User_20, is dependent on) -> Service_07
+(User_20, works on) -> Task_19
+(User_22, is collaborating with) -> User_18
+(User_23, depends on) -> Service_03
+(User_24, collaborates with) -> Emma
+(User_33, is dependent on) -> Service_07
+(User_34, uses) -> Tool_01
+(User_35, researches) -> Paper_19
+(User_36, prefers) -> GPUCluster
+(User_38, depends on) -> Service_13
+(User_39, depends on) -> Service_05
+(User_39, is a member of) -> Group_09

@@ -1,0 +1,737 @@
+[
+  {
+    "subject": "Alex",
+    "predicate": "collaborates with",
+    "object": "User_21"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "depends on",
+    "object": "Service_02"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "is based in",
+    "object": "Denver"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "is collaborating with",
+    "object": "User_33"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "is dependent on",
+    "object": "Service_04"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "is located in",
+    "object": "Boston"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "is part of",
+    "object": "Group_09"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "prefers",
+    "object": "Databases"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "uses",
+    "object": "CUDA"
+  },
+  {
+    "subject": "Alex",
+    "predicate": "works on",
+    "object": "Scheduler"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "is based in",
+    "object": "Chicago"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "is collaborating with",
+    "object": "User_18"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "is in",
+    "object": "SanDiego"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "is located in",
+    "object": "San Diego"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "prefers",
+    "object": "Testing"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "uses",
+    "object": "CUDA"
+  },
+  {
+    "subject": "Emma",
+    "predicate": "works on",
+    "object": "ProjectAtlas"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "collaborates with",
+    "object": "User_12"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "depends on",
+    "object": "Service_11"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "is based in",
+    "object": "Boston"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "is located in",
+    "object": "Miami"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "prefers",
+    "object": "Python"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "researches",
+    "object": "Paper_14"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "studies",
+    "object": "AgentMemory"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "uses",
+    "object": "Tool_01"
+  },
+  {
+    "subject": "Jack",
+    "predicate": "works on",
+    "object": "Project_03"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "collaborates with",
+    "object": "User_35"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "is based in",
+    "object": "San Diego"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "is collaborating with",
+    "object": "User_40"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "is part of",
+    "object": "Group_15"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "prefers",
+    "object": "Automation"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "researches",
+    "object": "Scheduling"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "studies",
+    "object": "DistributedSystems"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "uses",
+    "object": "CUDA"
+  },
+  {
+    "subject": "Jane",
+    "predicate": "works on",
+    "object": "Project_12"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "collaborates with",
+    "object": "Emma"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "depends on",
+    "object": "Service_04"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "is based in",
+    "object": "Denver"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "is located in",
+    "object": "SanDiego"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "prefers",
+    "object": "Python"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "researches",
+    "object": "Paper_10"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "uses",
+    "object": "Notebook"
+  },
+  {
+    "subject": "Noah",
+    "predicate": "works on",
+    "object": "TaskAlpha"
+  },
+  {
+    "subject": "Team_01",
+    "predicate": "belongs to",
+    "object": "InfraGroup"
+  },
+  {
+    "subject": "Team_01",
+    "predicate": "is dependent on",
+    "object": "Service_09"
+  },
+  {
+    "subject": "Team_01",
+    "predicate": "is located in",
+    "object": "Seattle"
+  },
+  {
+    "subject": "Team_01",
+    "predicate": "researches",
+    "object": "Paper_16"
+  },
+  {
+    "subject": "Team_01",
+    "predicate": "works on",
+    "object": "TaskAlpha"
+  },
+  {
+    "subject": "Team_03",
+    "predicate": "studies",
+    "object": "Paper_13"
+  },
+  {
+    "subject": "Team_03",
+    "predicate": "works on",
+    "object": "Task_12"
+  },
+  {
+    "subject": "Team_04",
+    "predicate": "prefers",
+    "object": "Java"
+  },
+  {
+    "subject": "Team_04",
+    "predicate": "researches",
+    "object": "Paper_20"
+  },
+  {
+    "subject": "Team_05",
+    "predicate": "is located in",
+    "object": "Denver"
+  },
+  {
+    "subject": "Team_06",
+    "predicate": "is located in",
+    "object": "Austin"
+  },
+  {
+    "subject": "Team_06",
+    "predicate": "prefers",
+    "object": "Java"
+  },
+  {
+    "subject": "Team_07",
+    "predicate": "depends on",
+    "object": "Service_12"
+  },
+  {
+    "subject": "Team_07",
+    "predicate": "researches",
+    "object": "Paper_18"
+  },
+  {
+    "subject": "Team_08",
+    "predicate": "prefers",
+    "object": "Rust"
+  },
+  {
+    "subject": "Team_08",
+    "predicate": "works on",
+    "object": "TaskAlpha"
+  },
+  {
+    "subject": "Team_09",
+    "predicate": "is dependent on",
+    "object": "Service_06"
+  },
+  {
+    "subject": "Team_09",
+    "predicate": "is based in",
+    "object": "Denver"
+  },
+  {
+    "subject": "Team_10",
+    "predicate": "collaborates with",
+    "object": "User_04"
+  },
+  {
+    "subject": "Team_10",
+    "predicate": "is located in",
+    "object": "Seattle"
+  },
+  {
+    "subject": "Team_10",
+    "predicate": "prefers",
+    "object": "Graphs"
+  },
+  {
+    "subject": "Team_10",
+    "predicate": "researches",
+    "object": "Paper_13"
+  },
+  {
+    "subject": "Team_10",
+    "predicate": "works on",
+    "object": "PipelineX"
+  },
+  {
+    "subject": "User_01",
+    "predicate": "belongs to",
+    "object": "Group_10"
+  },
+  {
+    "subject": "User_01",
+    "predicate": "uses",
+    "object": "CUDA"
+  },
+  {
+    "subject": "User_02",
+    "predicate": "collaborates with",
+    "object": "User_28"
+  },
+  {
+    "subject": "User_02",
+    "predicate": "is collaborating with",
+    "object": "User_36"
+  },
+  {
+    "subject": "User_02",
+    "predicate": "is part of",
+    "object": "Group_09"
+  },
+  {
+    "subject": "User_02",
+    "predicate": "prefers",
+    "object": "Testing"
+  },
+  {
+    "subject": "User_04",
+    "predicate": "depends on",
+    "object": "Cache"
+  },
+  {
+    "subject": "User_04",
+    "predicate": "uses",
+    "object": "Docker"
+  },
+  {
+    "subject": "User_06",
+    "predicate": "is part of",
+    "object": "Group_12"
+  },
+  {
+    "subject": "User_06",
+    "predicate": "uses",
+    "object": "Notebook"
+  },
+  {
+    "subject": "User_08",
+    "predicate": "is based in",
+    "object": "SanDiego"
+  },
+  {
+    "subject": "User_08",
+    "predicate": "is in",
+    "object": "Phoenix"
+  },
+  {
+    "subject": "User_08",
+    "predicate": "prefers",
+    "object": "Python"
+  },
+  {
+    "subject": "User_09",
+    "predicate": "is based in",
+    "object": "Chicago"
+  },
+  {
+    "subject": "User_09",
+    "predicate": "researches",
+    "object": "Paper_18"
+  },
+  {
+    "subject": "User_10",
+    "predicate": "prefers",
+    "object": "Visualization"
+  },
+  {
+    "subject": "User_10",
+    "predicate": "uses",
+    "object": "PyTorch"
+  },
+  {
+    "subject": "User_12",
+    "predicate": "is a member of",
+    "object": "Group_11"
+  },
+  {
+    "subject": "User_12",
+    "predicate": "prefers",
+    "object": "Rust"
+  },
+  {
+    "subject": "User_13",
+    "predicate": "uses",
+    "object": "Tool_01"
+  },
+  {
+    "subject": "User_13",
+    "predicate": "works on",
+    "object": "Project_08"
+  },
+  {
+    "subject": "User_14",
+    "predicate": "belongs to",
+    "object": "Group_04"
+  },
+  {
+    "subject": "User_15",
+    "predicate": "collaborates with",
+    "object": "User_04"
+  },
+  {
+    "subject": "User_15",
+    "predicate": "studies",
+    "object": "Paper_04"
+  },
+  {
+    "subject": "User_15",
+    "predicate": "uses",
+    "object": "Notebook"
+  },
+  {
+    "subject": "User_16",
+    "predicate": "researches",
+    "object": "Paper_06"
+  },
+  {
+    "subject": "User_16",
+    "predicate": "uses",
+    "object": "Docker"
+  },
+  {
+    "subject": "User_16",
+    "predicate": "works on",
+    "object": "Project_08"
+  },
+  {
+    "subject": "User_17",
+    "predicate": "collaborates with",
+    "object": "User_04"
+  },
+  {
+    "subject": "User_17",
+    "predicate": "prefers",
+    "object": "Databases"
+  },
+  {
+    "subject": "User_17",
+    "predicate": "researches",
+    "object": "Paper_15"
+  },
+  {
+    "subject": "User_18",
+    "predicate": "collaborates with",
+    "object": "Alex"
+  },
+  {
+    "subject": "User_18",
+    "predicate": "is dependent on",
+    "object": "Queue"
+  },
+  {
+    "subject": "User_18",
+    "predicate": "is located in",
+    "object": "Nevada"
+  },
+  {
+    "subject": "User_18",
+    "predicate": "is part of",
+    "object": "Group_07"
+  },
+  {
+    "subject": "User_18",
+    "predicate": "prefers",
+    "object": "Python"
+  },
+  {
+    "subject": "User_18",
+    "predicate": "studies",
+    "object": "Paper_18"
+  },
+  {
+    "subject": "User_19",
+    "predicate": "belongs to",
+    "object": "Group_12"
+  },
+  {
+    "subject": "User_20",
+    "predicate": "is dependent on",
+    "object": "Service_07"
+  },
+  {
+    "subject": "User_20",
+    "predicate": "works on",
+    "object": "Task_19"
+  },
+  {
+    "subject": "User_21",
+    "predicate": "is a member of",
+    "object": "Group_14"
+  },
+  {
+    "subject": "User_21",
+    "predicate": "is in",
+    "object": "Seattle"
+  },
+  {
+    "subject": "User_22",
+    "predicate": "collaborates with",
+    "object": "Emma"
+  },
+  {
+    "subject": "User_22",
+    "predicate": "is a member of",
+    "object": "Group_15"
+  },
+  {
+    "subject": "User_22",
+    "predicate": "is collaborating with",
+    "object": "User_18"
+  },
+  {
+    "subject": "User_22",
+    "predicate": "is located in",
+    "object": "Seattle"
+  },
+  {
+    "subject": "User_22",
+    "predicate": "uses",
+    "object": "PyTorch"
+  },
+  {
+    "subject": "User_23",
+    "predicate": "depends on",
+    "object": "Service_03"
+  },
+  {
+    "subject": "User_24",
+    "predicate": "collaborates with",
+    "object": "Emma"
+  },
+  {
+    "subject": "User_25",
+    "predicate": "is in",
+    "object": "Atlanta"
+  },
+  {
+    "subject": "User_25",
+    "predicate": "studies",
+    "object": "Paper_18"
+  },
+  {
+    "subject": "User_26",
+    "predicate": "works on",
+    "object": "Project_03"
+  },
+  {
+    "subject": "User_27",
+    "predicate": "is part of",
+    "object": "Group_03"
+  },
+  {
+    "subject": "User_28",
+    "predicate": "belongs to",
+    "object": "Group_03"
+  },
+  {
+    "subject": "User_28",
+    "predicate": "depends on",
+    "object": "Service_04"
+  },
+  {
+    "subject": "User_31",
+    "predicate": "prefers",
+    "object": "Testing"
+  },
+  {
+    "subject": "User_32",
+    "predicate": "depends on",
+    "object": "Planner"
+  },
+  {
+    "subject": "User_32",
+    "predicate": "prefers",
+    "object": "GPUCluster"
+  },
+  {
+    "subject": "User_32",
+    "predicate": "uses",
+    "object": "Kubernetes"
+  },
+  {
+    "subject": "User_32",
+    "predicate": "works on",
+    "object": "PipelineX"
+  },
+  {
+    "subject": "User_33",
+    "predicate": "is dependent on",
+    "object": "Service_07"
+  },
+  {
+    "subject": "User_34",
+    "predicate": "prefers",
+    "object": "C++"
+  },
+  {
+    "subject": "User_34",
+    "predicate": "uses",
+    "object": "Tool_01"
+  },
+  {
+    "subject": "User_34",
+    "predicate": "works on",
+    "object": "Project_16"
+  },
+  {
+    "subject": "User_35",
+    "predicate": "prefers",
+    "object": "Graphs"
+  },
+  {
+    "subject": "User_35",
+    "predicate": "researches",
+    "object": "Paper_19"
+  },
+  {
+    "subject": "User_35",
+    "predicate": "uses",
+    "object": "Jupyter"
+  },
+  {
+    "subject": "User_36",
+    "predicate": "depends on",
+    "object": "Service_14"
+  },
+  {
+    "subject": "User_36",
+    "predicate": "prefers",
+    "object": "GPUCluster"
+  },
+  {
+    "subject": "User_37",
+    "predicate": "depends on",
+    "object": "Service_13"
+  },
+  {
+    "subject": "User_37",
+    "predicate": "is located in",
+    "object": "Miami"
+  },
+  {
+    "subject": "User_37",
+    "predicate": "researches",
+    "object": "Paper_14"
+  },
+  {
+    "subject": "User_38",
+    "predicate": "depends on",
+    "object": "Service_13"
+  },
+  {
+    "subject": "User_38",
+    "predicate": "is located in",
+    "object": "Boston"
+  },
+  {
+    "subject": "User_38",
+    "predicate": "uses",
+    "object": "Docker"
+  },
+  {
+    "subject": "User_38",
+    "predicate": "works on",
+    "object": "Task_01"
+  },
+  {
+    "subject": "User_39",
+    "predicate": "depends on",
+    "object": "Service_05"
+  },
+  {
+    "subject": "User_39",
+    "predicate": "is a member of",
+    "object": "Group_09"
+  },
+  {
+    "subject": "User_40",
+    "predicate": "is dependent on",
+    "object": "Service_11"
+  },
+  {
+    "subject": "User_40",
+    "predicate": "is in",
+    "object": "Austin"
+  },
+  {
+    "subject": "User_40",
+    "predicate": "is part of",
+    "object": "InfraGroup"
+  }
+]

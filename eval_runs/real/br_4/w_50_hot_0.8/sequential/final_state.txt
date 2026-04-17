@@ -1,0 +1,35 @@
+(Alex, is based in) -> Boston
+(Alex, is dependent on) -> Service_10
+(Alex, is located in) -> Nevada
+(Alex, prefers) -> GPUCluster
+(Alex, uses) -> VSCode
+(Emma, collaborates with) -> Team_07
+(Emma, is dependent on) -> Service_01
+(Emma, is located in) -> SanDiego
+(Emma, prefers) -> Rust
+(Emma, uses) -> Jupyter
+(Jack, is collaborating with) -> Emma
+(Jack, is located in) -> Boston
+(Jack, researches) -> Paper_14
+(Jack, works on) -> Scheduler
+(Jane, is in) -> Austin
+(Jane, prefers) -> Python
+(Jane, uses) -> VSCode
+(Jane, works on) -> Task_20
+(Noah, belongs to) -> Group_03
+(Noah, is based in) -> Denver
+(Noah, is located in) -> Austin
+(Noah, is working on) -> KnowledgeBase
+(Noah, prefers) -> Java
+(Noah, uses) -> PyTorch
+(Noah, works on) -> Task_12
+(Team_04, researches) -> Paper_12
+(Team_08, works on) -> TaskAlpha
+(User_10, works on) -> KnowledgeBase
+(User_11, is a member of) -> Group_11
+(User_16, works on) -> ProjectAtlas
+(User_18, prefers) -> Python
+(User_22, is dependent on) -> Service_07
+(User_24, collaborates with) -> Emma
+(User_25, uses) -> Jupyter
+(User_34, uses) -> PyTorch

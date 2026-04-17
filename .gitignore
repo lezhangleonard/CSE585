@@ -10,3 +10,4 @@ final_runs/
 eval_runs_old/
 *v2_*.py 
 *test_*.sh
+*diff.py

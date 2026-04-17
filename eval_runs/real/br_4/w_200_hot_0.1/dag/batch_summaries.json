@@ -1,0 +1,49 @@
+[
+  {
+    "batch_index": 0,
+    "batch_size": 51,
+    "layer_widths": [
+      35,
+      12,
+      4
+    ],
+    "num_edges": 16,
+    "num_layers": 3
+  },
+  {
+    "batch_index": 1,
+    "batch_size": 51,
+    "layer_widths": [
+      31,
+      15,
+      5
+    ],
+    "num_edges": 20,
+    "num_layers": 3
+  },
+  {
+    "batch_index": 2,
+    "batch_size": 51,
+    "layer_widths": [
+      29,
+      13,
+      6,
+      2,
+      1
+    ],
+    "num_edges": 22,
+    "num_layers": 5
+  },
+  {
+    "batch_index": 3,
+    "batch_size": 47,
+    "layer_widths": [
+      34,
+      9,
+      3,
+      1
+    ],
+    "num_edges": 13,
+    "num_layers": 4
+  }
+]

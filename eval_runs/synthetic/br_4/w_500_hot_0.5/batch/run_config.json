@@ -1,0 +1,9 @@
+{
+  "backend": "vllm",
+  "batch_size": 126,
+  "executor": "batch",
+  "resolve_pronouns": false,
+  "store": "memory",
+  "visualize_dag": true,
+  "workload": "workloads/synthetic/w_500_hot_0.5.json"
+}

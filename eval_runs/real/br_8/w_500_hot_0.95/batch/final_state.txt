@@ -1,0 +1,82 @@
+(Alex, belongs to) -> InfraGroup
+(Alex, collaborates with) -> Jane
+(Alex, is a member of) -> Group_03
+(Alex, is based in) -> Boston
+(Alex, is collaborating with) -> Jack
+(Alex, is in) -> Nevada
+(Alex, is located in) -> Nevada
+(Alex, is studying) -> Paper_17
+(Alex, is working on) -> KnowledgeBase
+(Alex, prefers) -> GPUCluster
+(Alex, uses) -> PyTorch
+(Alex, works on) -> ProjectAtlas
+(Emma, collaborates with) -> Jane
+(Emma, is a member of) -> Group_11
+(Emma, is based in) -> Boston
+(Emma, is collaborating with) -> User_37
+(Emma, is in) -> Nevada
+(Emma, is located in) -> Boston
+(Emma, prefers) -> Testing
+(Emma, uses) -> Jupyter
+(Emma, works on) -> TaskAlpha
+(Jack, collaborates with) -> Alex
+(Jack, is based in) -> Seattle
+(Jack, is collaborating with) -> User_07
+(Jack, is dependent on) -> Service_13
+(Jack, is in) -> Denver
+(Jack, is located in) -> Denver
+(Jack, is working on) -> KnowledgeBase
+(Jack, prefers) -> GPUCluster
+(Jack, uses) -> PyTorch
+(Jack, works on) -> Scheduler
+(Jane, collaborates with) -> Noah
+(Jane, is based in) -> Seattle
+(Jane, is collaborating with) -> User_29
+(Jane, is dependent on) -> Service_09
+(Jane, is in) -> Boston
+(Jane, is located in) -> Boston
+(Jane, is working on) -> KnowledgeBase
+(Jane, prefers) -> Rust
+(Jane, researches) -> AgentMemory
+(Jane, uses) -> Docker
+(Jane, works on) -> KnowledgeBase
+(Noah, collaborates with) -> Jack
+(Noah, is based in) -> Denver
+(Noah, is dependent on) -> Service_15
+(Noah, is in) -> Nevada
+(Noah, is located in) -> SanDiego
+(Noah, prefers) -> Rust
+(Noah, uses) -> Docker
+(Noah, works on) -> KnowledgeBase
+(Team_02, is a member of) -> Group_13
+(Team_03, uses) -> VSCode
+(Team_06, is dependent on) -> Database
+(Team_06, prefers) -> Python
+(Team_06, studies) -> Paper_16
+(Team_07, is located in) -> Austin
+(Team_07, prefers) -> Automation
+(Team_10, collaborates with) -> Noah
+(Team_10, researches) -> Paper_10
+(User_01, researches) -> Paper_15
+(User_02, works on) -> PipelineX
+(User_04, works on) -> PipelineX
+(User_05, collaborates with) -> Noah
+(User_07, depends on) -> Service_15
+(User_07, works on) -> TaskAlpha
+(User_09, uses) -> VSCode
+(User_11, uses) -> VSCode
+(User_12, is located in) -> Boston
+(User_16, prefers) -> GPUCluster
+(User_17, works on) -> KnowledgeBase
+(User_18, studies) -> Paper_18
+(User_18, uses) -> Jupyter
+(User_20, is located in) -> Nevada
+(User_21, works on) -> KnowledgeBase
+(User_22, is dependent on) -> Service_07
+(User_25, uses) -> Jupyter
+(User_26, works on) -> Project_03
+(User_28, collaborates with) -> Emma
+(User_30, uses) -> VSCode
+(User_31, works on) -> Scheduler
+(User_33, uses) -> Docker
+(User_34, uses) -> PyTorch

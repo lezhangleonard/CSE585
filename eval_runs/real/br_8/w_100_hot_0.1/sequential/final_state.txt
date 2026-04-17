@@ -1,0 +1,92 @@
+(Alex, is located in) -> Phoenix
+(Emma, studies) -> Paper_01
+(Jack, depends on) -> Service_10
+(Jack, uses) -> Tool_02
+(Noah, depends on) -> Service_13
+(Noah, is dependent on) -> Planner
+(Noah, prefers) -> Testing
+(Noah, uses) -> ClusterA
+(Team_01, collaborates with) -> User_06
+(Team_01, is located in) -> Atlanta
+(Team_01, prefers) -> Testing
+(Team_01, works on) -> PipelineX
+(Team_02, is a member of) -> Group_10
+(Team_03, is in) -> Miami
+(Team_03, studies) -> Paper_13
+(Team_04, is dependent on) -> Service_05
+(Team_04, prefers) -> C++
+(Team_04, uses) -> ClusterA
+(Team_04, works on) -> Task_01
+(Team_05, researches) -> Paper_02
+(Team_06, researches) -> Paper_13
+(Team_08, works on) -> Project_13
+(Team_09, is dependent on) -> Service_06
+(Team_10, researches) -> Paper_13
+(Team_10, works on) -> Task_17
+(User_01, studies) -> Paper_03
+(User_02, is part of) -> InfraGroup
+(User_02, prefers) -> Graphs
+(User_04, collaborates with) -> Team_09
+(User_04, depends on) -> Cache
+(User_04, is dependent on) -> Service_08
+(User_04, uses) -> Kubernetes
+(User_05, is collaborating with) -> User_09
+(User_05, researches) -> Paper_20
+(User_06, is part of) -> Group_12
+(User_08, is dependent on) -> Service_09
+(User_09, is based in) -> Atlanta
+(User_10, is dependent on) -> Service_12
+(User_10, uses) -> TensorFlow
+(User_11, researches) -> Paper_03
+(User_12, is collaborating with) -> Alex
+(User_12, researches) -> Scheduling
+(User_12, works on) -> Task_18
+(User_13, is dependent on) -> Service_10
+(User_14, uses) -> Tool_02
+(User_15, collaborates with) -> User_04
+(User_15, is a member of) -> Group_03
+(User_15, works on) -> Task_09
+(User_17, studies) -> Paper_05
+(User_18, is located in) -> Dallas
+(User_18, prefers) -> Testing
+(User_19, uses) -> Tool_01
+(User_20, is collaborating with) -> User_21
+(User_20, is dependent on) -> Service_11
+(User_20, is in) -> Phoenix
+(User_20, works on) -> Task_19
+(User_21, prefers) -> Databases
+(User_21, researches) -> Scheduling
+(User_22, is located in) -> Dallas
+(User_22, is part of) -> SystemsLab
+(User_22, uses) -> ClusterA
+(User_23, depends on) -> Service_03
+(User_23, prefers) -> Optimization
+(User_23, works on) -> Project_15
+(User_24, collaborates with) -> User_26
+(User_24, works on) -> Task_01
+(User_25, works on) -> TaskAlpha
+(User_26, prefers) -> Java
+(User_26, studies) -> Paper_08
+(User_26, works on) -> Project_03
+(User_28, belongs to) -> Group_03
+(User_30, is collaborating with) -> User_40
+(User_32, depends on) -> Planner
+(User_32, uses) -> Kubernetes
+(User_33, is dependent on) -> Service_07
+(User_33, uses) -> Kubernetes
+(User_34, works on) -> Project_16
+(User_35, depends on) -> Service_04
+(User_35, prefers) -> Java
+(User_35, researches) -> Paper_09
+(User_37, is in) -> SanDiego
+(User_37, researches) -> Paper_01
+(User_38, belongs to) -> Group_10
+(User_38, depends on) -> Service_13
+(User_38, uses) -> ClusterB
+(User_38, works on) -> Task_01
+(User_39, depends on) -> Service_05
+(User_39, is a member of) -> Group_09
+(User_39, is part of) -> Group_09
+(User_39, works on) -> Task_11
+(User_40, depends on) -> Queue
+(User_40, is part of) -> InfraGroup

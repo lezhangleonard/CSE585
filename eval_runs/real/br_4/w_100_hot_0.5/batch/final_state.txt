@@ -1,0 +1,84 @@
+(Alex, is collaborating with) -> User_33
+(Alex, prefers) -> Optimization
+(Alex, uses) -> Notebook
+(Alex, works on) -> TaskAlpha
+(Emma, is based in) -> Chicago
+(Emma, is located in) -> San Diego
+(Emma, prefers) -> C++
+(Emma, uses) -> Jupyter
+(Jack, collaborates with) -> Jane
+(Jack, depends on) -> Service_11
+(Jack, prefers) -> Databases
+(Jack, researches) -> Paper_14
+(Jack, studies) -> AgentMemory
+(Jane, collaborates with) -> User_27
+(Jane, is based in) -> Phoenix
+(Jane, is part of) -> Group_15
+(Jane, prefers) -> Python
+(Jane, researches) -> Scheduling
+(Jane, studies) -> AgentMemory
+(Jane, works on) -> PipelineX
+(Noah, collaborates with) -> Emma
+(Noah, depends on) -> Service_04
+(Noah, is based in) -> Phoenix
+(Noah, is located in) -> SanDiego
+(Noah, prefers) -> Python
+(Noah, uses) -> Tool_02
+(Noah, works on) -> Task_12
+(Team_01, is located in) -> Seattle
+(Team_01, works on) -> PipelineX
+(Team_03, studies) -> Paper_13
+(Team_03, works on) -> Task_12
+(Team_04, prefers) -> Java
+(Team_05, is located in) -> Denver
+(Team_07, researches) -> Paper_18
+(Team_08, works on) -> TaskAlpha
+(Team_09, is dependent on) -> Service_06
+(Team_10, is located in) -> Seattle
+(Team_10, prefers) -> Graphs
+(Team_10, researches) -> Paper_13
+(Team_10, works on) -> PipelineX
+(User_04, depends on) -> Cache
+(User_04, uses) -> Docker
+(User_06, is part of) -> Group_12
+(User_09, is based in) -> Chicago
+(User_09, researches) -> Paper_18
+(User_10, uses) -> PyTorch
+(User_13, uses) -> Tool_01
+(User_15, collaborates with) -> User_04
+(User_15, studies) -> Paper_04
+(User_16, works on) -> Project_08
+(User_17, collaborates with) -> User_04
+(User_17, researches) -> Paper_15
+(User_18, collaborates with) -> User_10
+(User_18, is located in) -> Nevada
+(User_18, prefers) -> Python
+(User_20, is dependent on) -> Service_07
+(User_20, works on) -> Task_19
+(User_22, is collaborating with) -> User_18
+(User_22, is located in) -> Seattle
+(User_22, uses) -> ClusterA
+(User_23, depends on) -> Service_03
+(User_24, collaborates with) -> Emma
+(User_26, works on) -> Project_03
+(User_28, belongs to) -> Group_03
+(User_28, depends on) -> Service_04
+(User_31, prefers) -> Testing
+(User_32, depends on) -> Planner
+(User_32, works on) -> PipelineX
+(User_33, is dependent on) -> Service_07
+(User_34, uses) -> Tool_01
+(User_34, works on) -> Project_16
+(User_35, researches) -> Paper_19
+(User_35, uses) -> Jupyter
+(User_36, depends on) -> Service_14
+(User_36, prefers) -> GPUCluster
+(User_37, depends on) -> Service_13
+(User_37, is located in) -> Miami
+(User_38, depends on) -> Service_13
+(User_38, uses) -> Docker
+(User_38, works on) -> Task_01
+(User_39, depends on) -> Service_05
+(User_39, is a member of) -> Group_09
+(User_40, is dependent on) -> Service_11
+(User_40, is part of) -> InfraGroup
