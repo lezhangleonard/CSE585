@@ -16,7 +16,8 @@ from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from openai import OpenAI
 
-MODEL_PATH = "/scratch/engin_root/engin1/arshiv/ml/hf_models/qwen2.5-7b-instruct"
+MODEL_PATH = os.environ['MODEL_PATH']
+
 BACKEND = "vllm"  # "hf" or "vllm"
 STORE_TYPE = "memory"  # "memory" or "neo4j"
 VISUALIZE_DAG = True
@@ -142,11 +143,11 @@ class VLLMOnlineBackend(LLMInterface):
     def __init__(self, model_path, port=8000):
         # Connect to the local vLLM server running in the SLURM job
         self.client = OpenAI(
-            api_key="EMPTY", 
+            api_key="EMPTY",
             base_url=f"http://localhost:{port}/v1"
         )
         self.model_name = model_path
-        
+
         # Load local tokenizer just to apply the Qwen2.5 chat template
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
@@ -175,7 +176,7 @@ class VLLMOnlineBackend(LLMInterface):
 
         # Re-sort responses to guarantee alignment with original prompt order
         choices = sorted(response.choices, key=lambda x: x.index)
-        
+
         # Mock the vLLM output structure for compatibility with llm_reasoning_engine.py
         class MockOutput:
             def __init__(self, text):

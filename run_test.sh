@@ -11,19 +11,18 @@
 #SBATCH --error=logs/%x_%j.err
 
 source ~/.bashrc
-conda activate akg
+conda activate experiment_env
 module load cuda
 # Add tokens here (if required)
 export HF_TOKEN=""
 export GEMINI_API_KEY=""
-export HF_HOME=/scratch/engin_root/engin1/arshiv/ml/hf_cache
-export MODEL_HOME=/scratch/engin_root/engin1/arshiv/ml/hf_models
+export MODEL_HOME="/home/dimashu/hf_models/Qwen2.5-1.5B"
 
 mkdir -p logs
 
 echo "Starting vLLM server..."
 python -m vllm.entrypoints.openai.api_server \
-    --model /scratch/engin_root/engin1/arshiv/ml/hf_models/qwen2.5-7b-instruct \
+    --model $MODEL_HOME \
     --dtype bfloat16 \
     --max-model-len 4096 \
     --gpu-memory-utilization 0.75 \
@@ -43,7 +42,6 @@ python run_experiment_v2.py --mode synthetic
 
 kill $VLLM_PID
 echo "Job complete."
-
 
 # echo "All workloads generated."
 # ./neo4j_server/bin/neo4j start
