@@ -65,7 +65,7 @@ python workload_gen.py --n <number_of_lines> --hot <hot_ratio> --out <output_fil
 Execute the main experiment script.
 
 ```bash
-bash run_test.sh
+sbatch run_test.sh
 ```
 
 This script runs the workloads with the following configuration:

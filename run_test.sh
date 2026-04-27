@@ -41,8 +41,6 @@ while ! curl -s http://localhost:8000/v1/models > /dev/null; do
 done
 echo "vLLM Server is ONLINE!"
 
-python run_experiment.py
-
 # Workloads
 WORKLOADS=(
     "workloads/real/w_5_hot_0.1.json"

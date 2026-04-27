@@ -251,7 +251,7 @@ def extraction_worker(raw_texts, extractor, batch_size, data_queue, extracted_fa
         print("[Producer] Extraction complete. Sentinel pushed.")
 
 
-def run_single_executor(executor_name, executor, raw_texts, extractor, batch_size, run_dir):
+def run_single_executor(executor_name, executor, raw_texts, extractor, batch_size, run_dir, VERBOSE, VISUALIZE_DAG):
     pq = queue.Queue(maxsize=3)
     extracted_facts = []
     producer = threading.Thread(
@@ -333,6 +333,8 @@ def run_workload(shared_llm, workload_path, RUN_TYPE, BACKEND, STORE_TYPE, VISUA
                 extractor=extractor,
                 batch_size=batch_size,
                 run_dir=run_dir,
+                VERBOSE=VERBOSE,
+                VISUALIZE_DAG=VISUALIZE_DAG
             )
 
             if executor_name == "sequential":
