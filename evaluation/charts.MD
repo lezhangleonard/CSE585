@@ -19,7 +19,6 @@
 | 04 | DAG Parallel Width | Measures extracted concurrency from DAG scheduler |
 | 05 | Reasoning Latency under Contention | LLM decision cost across workloads |
 | 06 | DAG Parallel Width Heatmap | Dense view of concurrency vs input size and contention |
-| 13 | LLM Time Fraction | Shows how much of total execution time is spent in LLM vs system overhead (extractor + reasoner breakdown). |
 
 ---
 

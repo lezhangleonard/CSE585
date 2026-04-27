@@ -6,7 +6,7 @@ import copy
 import torch
 import argparse
 
-from updated_agent_extractor import SimpleAgenticPipeline
+from agent_extractor import SimpleAgenticPipeline
 from llm_reasoning_engine import LLMReasoningEngine
 from store import InMemoryStore, Neo4jStore
 from sequence_executor import SequentialExecutor
@@ -17,13 +17,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from openai import OpenAI
 
 MODEL_PATH = os.environ['MODEL_PATH']
-
-BACKEND = "vllm"  # "hf" or "vllm"
-STORE_TYPE = "memory"  # "memory" or "neo4j"
-VISUALIZE_DAG = True
-VERBOSE = False
-RESOLVE_PRONOUNS = False
-
 
 SENTINEL = object()
 
@@ -108,47 +101,13 @@ class HFBackend(LLMInterface):
 
         return wrapped
 
-class VLLMBackend(LLMInterface):
-    def __init__(self, model_path):
-        self.llm = LLM(
-            model=model_path,
-            trust_remote_code=True,
-            gpu_memory_utilization=0.6,
-            max_model_len=4096,
-            max_num_seqs=8,
-            max_num_batched_tokens=4096,
-            enforce_eager=False,
-        )
-
-    def generate(self, prompts, sampling_params=None, use_tqdm=False):
-        if sampling_params is None:
-            sampling_params = SamplingParams(
-                temperature=0.0,
-                max_tokens=256,
-                stop=["<|eot_id|>"],
-            )
-
-        texts = [
-            self.llm.get_tokenizer().apply_chat_template(
-                p,
-                tokenize=False,
-                add_generation_prompt=True
-            )
-            for p in prompts
-        ]
-
-        return self.llm.generate(texts, sampling_params, use_tqdm=use_tqdm)
-
 class VLLMOnlineBackend(LLMInterface):
     def __init__(self, model_path, port=8000):
-        # Connect to the local vLLM server running in the SLURM job
         self.client = OpenAI(
             api_key="EMPTY",
             base_url=f"http://localhost:{port}/v1"
         )
         self.model_name = model_path
-
-        # Load local tokenizer just to apply the Qwen2.5 chat template
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
     def generate(self, prompts, sampling_params=None, use_tqdm=False):
@@ -165,7 +124,6 @@ class VLLMOnlineBackend(LLMInterface):
             for p in prompts
         ]
 
-        # Send the batch request to the local server
         response = self.client.completions.create(
             model=self.model_name,
             prompt=texts,
@@ -174,10 +132,8 @@ class VLLMOnlineBackend(LLMInterface):
             stop=["<|eot_id|>"]
         )
 
-        # Re-sort responses to guarantee alignment with original prompt order
         choices = sorted(response.choices, key=lambda x: x.index)
 
-        # Mock the vLLM output structure for compatibility with llm_reasoning_engine.py
         class MockOutput:
             def __init__(self, text):
                 self.text = text
@@ -187,23 +143,23 @@ class VLLMOnlineBackend(LLMInterface):
 
         return [MockResult(choice.text) for choice in choices]
 
-def build_llm():
-    if BACKEND == "hf":
+def build_llm(backend):
+    if backend == "hf":
         return HFBackend(MODEL_PATH)
-    if BACKEND == "vllm":
+    if backend == "vllm":
         return VLLMOnlineBackend(MODEL_PATH)
-    raise ValueError(f"Unknown backend: {BACKEND}")
+    raise ValueError(f"Unknown backend: {backend}")
 
 
-def create_store():
-    if STORE_TYPE == "memory":
+def create_store(store_type):
+    if store_type == "memory":
         return InMemoryStore()
     return Neo4jStore("bolt://localhost:7687", "neo4j", "mypwdmypwd")
 
 
 def create_run_dir(executor_type, workload_path, batch_ratio, RUN_TYPE):
     workload_name = os.path.splitext(os.path.basename(workload_path))[0]
-    run_dir = os.path.join("eval_runs", RUN_TYPE, f"br_{batch_ratio}", workload_name, executor_type)
+    run_dir = os.path.join("ddeval_runs", RUN_TYPE, f"br_{batch_ratio}", workload_name, executor_type)
     os.makedirs(run_dir, exist_ok=True)
     return run_dir
 
@@ -328,14 +284,13 @@ def persist_run(result, run_dir, extracted_facts, run_config):
         write_json(os.path.join(run_dir, "batch_summaries.json"), result["batch_summaries"])
 
 
-def run_workload(shared_llm, workload_path, RUN_TYPE):
+def run_workload(shared_llm, workload_path, RUN_TYPE, BACKEND, STORE_TYPE, VISUALIZE_DAG, VERBOSE, RESOLVE_PRONOUNS):
     with open(workload_path, "r") as f:
         raw_texts = json.load(f)
 
 
     workload_size = len(raw_texts)
-    # batches = [4, 8, 16]
-    batches = [4]
+    batches = [4, 8]
     for bs in batches:
         batch_size = 1 + (workload_size // bs)
         print(f"\n{'=' * 60}")
@@ -350,7 +305,7 @@ def run_workload(shared_llm, workload_path, RUN_TYPE):
         for executor_name in executor_order:
             extractor = SimpleAgenticPipeline(shared_llm, debug=VERBOSE, resolve_pronouns=RESOLVE_PRONOUNS)
             engine = LLMReasoningEngine(shared_llm, debug=VERBOSE)
-            store = create_store()
+            store = create_store(STORE_TYPE)
 
             if executor_name == "sequential":
                 executor = SequentialExecutor(extractor=extractor, store=store, reasoning_engine=engine)
@@ -403,49 +358,42 @@ def run_workload(shared_llm, workload_path, RUN_TYPE):
 
     return results
 
+def infer_mode_from_path(path):
+    if "synthetic" in path:
+        return "synthetic"
+    elif "real" in path:
+        return "real"
+    else:
+        raise ValueError(f"Cannot infer mode from path: {path}")
 
 def main():
     print(f"\n{'=' * 60}")
     print("LOADING MODEL ONCE")
-    print(f"backend={BACKEND}, model={MODEL_PATH}")
+    print(f"model={MODEL_PATH}")
     print(f"{'=' * 60}")
-    shared_llm = build_llm()
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["synthetic", "real"], required=True)
+    parser.add_argument("--backend", choices=["hf", "vllm"], default="vllm")
+    parser.add_argument("--store", choices=["memory", "neo4j"], default="memory")
+    parser.add_argument("--visualize_dag", action="store_true")
+    parser.add_argument("--verbose", action="store_true")
+    parser.add_argument("--resolve_pronouns", action="store_true")
+    parser.add_argument("--workloads", nargs="+", required=True)
     args = parser.parse_args()
 
-    WORKLOADS = [
-        # f"workloads/{args.mode}/w_5_hot_0.1.json",
-        # f"workloads/{args.mode}/w_5_hot_0.5.json",
-        # f"workloads/{args.mode}/w_5_hot_0.8.json",
-        # f"workloads/{args.mode}/w_5_hot_0.95.json",
-        # f"workloads/{args.mode}/w_20_hot_0.1.json",
-        # f"workloads/{args.mode}/w_20_hot_0.5.json",
-        # f"workloads/{args.mode}/w_20_hot_0.8.json",
-        # f"workloads/{args.mode}/w_20_hot_0.95.json",
-        # f"workloads/{args.mode}/w_100_hot_0.1.json",
-        # f"workloads/{args.mode}/w_100_hot_0.5.json",
-        # f"workloads/{args.mode}/w_100_hot_0.8.json",
-        f"workloads/{args.mode}/w_100_hot_0.95.json",
-        # f"workloads/{args.mode}/w_500_hot_0.1.json",
-        # f"workloads/{args.mode}/w_500_hot_0.5.json",
-        # f"workloads/{args.mode}/w_500_hot_0.8.json",
-        # f"workloads/{args.mode}/w_500_hot_0.95.json",
-        # f"workloads/{args.mode}/w_1000_hot_0.1.json",
-        # f"workloads/{args.mode}/w_1000_hot_0.5.json",
-        # f"workloads/{args.mode}/w_1000_hot_0.8.json",
-        # f"workloads/{args.mode}/w_1000_hot_0.95.json",
-    ]
+    shared_llm = build_llm(args.backend)
 
-    all_results = {}
-    for workload_path in WORKLOADS:
-        all_results[workload_path] = run_workload(shared_llm, workload_path, args.mode)
+    if len(args.workloads) > 0:
+        run_type = infer_mode_from_path(args.workloads[0])
 
-    print(f"\n{'=' * 60}")
-    print("ALL WORKLOADS COMPLETE")
-    print(f"num_workloads={len(WORKLOADS)}")
-    print(f"{'=' * 60}")
+        all_results = {}
+        for workload_path in args.workloads:
+            all_results[workload_path] = run_workload(shared_llm, workload_path, run_type, args.backend, args.store, args.visualize_dag, args.verbose, args.resolve_pronouns)
+
+        print(f"\n{'=' * 60}")
+        print("ALL WORKLOADS COMPLETE")
+        print(f"num_workloads={len(args.workloads)}")
+        print(f"{'=' * 60}")
 
 
 if __name__ == "__main__":

@@ -59,7 +59,7 @@ Use `workload_gen.py` to create the JSON workload files.
 python workload_gen.py --n <number_of_lines> --hot <hot_ratio> --out <output_file.json>
 ```
 * **Example:** `python workload_gen.py --n 1000 --hot 0.2 --out workload_1.json`
-* There are already existing workloads in workloads/ to be used
+* You can also use `gen.sh`. There are already existing workloads in workloads/ to be used.
 
 ### B. Run Experiments
 Execute the main experiment script.
@@ -67,3 +67,25 @@ Execute the main experiment script.
 ```bash
 bash run_test.sh
 ```
+
+This script runs the workloads with the following configuration:
+
+- `--backend vllm`  
+  Chooses the inference backend: `vllm` uses the local vLLM server for generation, while `hf` would use Hugging Face’s `transformers` directly.
+
+- `--store memory`  
+  Uses an in‑memory key‑value store for the knowledge graph. Using `neo4j` instead would persist state in a Neo4j graph database.
+
+- `--visualize_dag` (disabled by omission)  
+  Controls whether to generate and save DAG visualizations during execution.
+
+- `--verbose` (disabled by omission)  
+  Enables extra logging from the extraction and executor threads.
+
+- `--resolve_pronouns` (disabled by omission)  
+  Enables pronoun coreference resolution in the fact‑extraction pipeline. When omitted, sentences are processed without explicit pronoun resolution.
+
+- `--workloads ...`  
+  Specifies the JSON workload files (e.g., `workloads/real/w_5_hot_0.1.json` and `workloads/synthetic/w_5_hot_0.1.json`) that list the raw text inputs to process.
+
+Make sure `vllm` is installed in the conda/Pip environment used by `run_test.sh` and that `MODEL_PATH` points to your model directory before running.

@@ -55,9 +55,6 @@ def build_df(root_dir: str):
                 "total_updates": s.get("total_updates", 0.0),
                 "num_no_ops": s.get("num_no_ops", 0.0),
                 "num_mutations": s.get("num_mutations", 0.0),
-                "extractor_llm_time_sec": s.get("extractor_llm_time_sec", 0.0),
-                "reasoner_llm_time_sec": s.get("reasoner_llm_time_sec", 0.0),
-                "total_time_sec": s.get("total_time_sec", 0.0),
             })
 
         except Exception:
@@ -69,13 +66,20 @@ def build_df(root_dir: str):
 
     df["mutation_ratio"] = df["num_mutations"] / df["total_updates"].replace(0, pd.NA)
     df["noop_ratio"] = df["num_no_ops"] / df["total_updates"].replace(0, pd.NA)
-    df["llm_time_sec"] = (
-    df["extractor_llm_time_sec"] + df["reasoner_llm_time_sec"])
-    df["non_llm_time_sec"] = (df["total_time_sec"] - df["llm_time_sec"])
-    df["llm_fraction"] = (df["llm_time_sec"] / df["total_time_sec"].replace(0, pd.NA))
-    df["extractor_fraction"] = (df["extractor_llm_time_sec"] / df["total_time_sec"].replace(0, pd.NA))
-    df["reasoner_fraction"] = (df["reasoner_llm_time_sec"] / df["total_time_sec"].replace(0, pd.NA))
+    
+    df.to_csv("evaluation/summary.csv", index=False)
 
+    agg_df = df.groupby(['run_type', 'N', 'hot', 'mode']).mean().reset_index()
+    agg_df.to_csv('evaluation/aggregate.csv', index=False)
+
+    summary = agg_df.groupby('mode')['correctness'].mean()
+
+    mean_correctness_dag = summary['dag']
+    mean_correctness_batch = summary['batch']
+    rel_improvement = (mean_correctness_dag - mean_correctness_batch) / mean_correctness_batch * 100
+
+    print(f"Summary Correctness:\n{summary}")
+    print(f"\nRelative Correctness Improvement: {rel_improvement:.2f}%")
     return df
 
 
@@ -403,29 +407,10 @@ def generate_plots(df, out_dir="evaluation/plots"):
     g.figure.suptitle("DAG Throughput Scaling", y=1.02)
     g.savefig(out / "12_dag_throughput.png")
     plt.close(g.figure)
-
-    # =========================================================
-    # 13 LLM TIME FRACTION
-    # =========================================================
-    g = sns.relplot(
-        data=df,
-        x="hot",
-        y="llm_fraction",
-        hue="mode",
-        col="N",
-        row="run_type",
-        kind="line",
-        marker="o"
-    )
-
-    g.set_axis_labels("Hot ratio", "LLM Time / Total Time")
-    g.figure.suptitle("LLM Utilization under Contention", y=1.02)
-    g.savefig(out / "13_llm_fraction.png")
-    plt.close(g.figure)
-
+    
 
 if __name__ == "__main__":
     df = build_df("./evaluation/eval_runs")
     generate_plots(df)
-    # make_poster_figure(df)
+    make_poster_figure(df)
     print("Done!!")
